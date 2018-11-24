@@ -19,13 +19,13 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
+  database: ochoko_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: myapp
+  username: morinoko
 
   # The password associated with the postgres role (username).
   #password:
@@ -53,7 +53,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: myapp_test
+  database: ochoko_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -76,6 +76,6 @@ test:
 #
 production:
   <<: *default
-  database: myapp_production
-  username: myapp
+  database: ochoko_production
+  username: ochoko
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
