@@ -1,3 +1,13 @@
 ja:
   hello: 'ハロー！'
   signup: "登録する"
+  
+  activerecord:
+    models:
+      user: "ユーザー"
+    attributes:
+      user:
+        username: "ユーザー名"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード確認"
