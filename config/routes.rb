@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   
   scope "(:locale)", locale: /en|ja/ do
     resources :users, only: [:create, :show]
-    get '/signup' => "users#new"
     
+    # Signup/Login
+    get '/signup' => "users#new"
+    get '/login' => "sessions#new"
     get '/auth/facebook/callback' => 'sessions#create'
+    
     root 'welcome#index'
   end
 
