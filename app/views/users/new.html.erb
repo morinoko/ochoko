@@ -21,5 +21,9 @@
     <%= f.password_field :password_confirmation %>
   </div>
   
-  <%= f.submit t 'signup' %>
+  <%= f.submit t('signup') %>
 <% end %>
+
+<div id="facebook_login">
+  <%= link_to t('facebook_login'), '/auth/facebook' %>
+</div>

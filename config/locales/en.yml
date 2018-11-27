@@ -32,3 +32,14 @@
 en:
   hello: "Hello world"
   signup: "Sign up"
+  facebook_login: "Log in with Facebook"
+
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        username: "Username"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Confirm Password"
