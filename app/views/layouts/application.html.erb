@@ -11,5 +11,9 @@
 
   <body>
     <%= yield %>
+    
+    <footer>
+      <%= link_to t('logout'), logout_path, method: :delete %>
+    </footer>
   </body>
 </html>
