@@ -1,6 +1,7 @@
 ja:
   hello: "ハロー！"
   signup: "登録する"
+  login: "ログインする"
   facebook_login: "フェスブックでログインする"
   
   activerecord:
