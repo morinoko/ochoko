@@ -13,7 +13,7 @@
     <%= yield %>
     
     <footer>
-      <%= link_to t('logout'), logout_path, method: :delete %>
+      <%= link_to(t('logout'), logout_path, method: :delete) if logged_in? %>
     </footer>
   </body>
 </html>
