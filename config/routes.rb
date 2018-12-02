@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tasting_notes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   scope "(:locale)", locale: /en|ja/ do
