@@ -5,6 +5,24 @@
   margin: 0 auto;
 }
 
+.button {
+  padding: 7px 1.5em 8px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.button,
+.button a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Colors */
+/* ------------------------------- */
+.btn-regular {
+  background-color: #0277BD;
+}
+
+
 /* Header */
 /* ------------------------------- */
 header {
@@ -41,13 +59,7 @@ nav ul li:last-child {
 }
 
 nav .signup {
-  background: #0277BD;
-  border-radius: 5px;
   padding: 5px 10px 7px;
-}
-
-nav .signup a {
-  color: white;
 }
 
 /* Main */
