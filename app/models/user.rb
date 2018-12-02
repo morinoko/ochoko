@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :tasting_notes
+  has_many :sakes, through: :tasting_notes
   has_secure_password
   
   validates :password, presence: true
