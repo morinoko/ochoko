@@ -36,9 +36,16 @@ en:
   logout: "Logout"
   facebook_login: "Log in with Facebook"
   login_required: "You need to be logged in to do that."
+  login_status: "Logged in as %{username}."
   
   welcome:
-    catchphrase: "Your personal sake tasting notebook."
+    index:
+      catchphrase: "Your personal sake tasting notebook."
+      
+  users:
+    show:
+      title: "My Dashboard"
+      sake_list_title: "My Sakes"
 
   activerecord:
     models:

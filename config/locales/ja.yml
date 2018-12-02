@@ -5,9 +5,16 @@ ja:
   logout: "ログアウト"
   facebook_login: "フェスブックでログインする"
   login_required: "ログインが必要です。"
+  login_status: "%{username}でログインしています。"
     
   welcome:
-    catchphrase: "マイ日本酒手帖"
+    index:
+      catchphrase: "マイ日本酒手帖"
+            
+  users:
+    show:
+      title: "ダッシュボード"
+      sake_list_title: "私の日本酒"
   
   activerecord:
     models:
