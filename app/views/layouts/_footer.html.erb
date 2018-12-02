@@ -1,0 +1,13 @@
+<footer>
+  <div class="container">
+    <div id="language_menu">
+      <%= link_to "English", root_path(locale: :en) %> | <%= link_to "日本語", root_path(locale: :ja) %>
+    </div>
+    
+    <% if logged_in? %>
+      <div id="login_status">
+        <%= t('login_status', username: current_user.username) %>
+      </div>
+    <% end %>
+  </div>
+</footer>

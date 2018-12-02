@@ -1,67 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ochoko</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <% if I18n.locale == :ja %>
-      <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&amp;subset=japanese" %>
-    <% else %>
-      <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700" %>
-    <% end %>
-    <%= stylesheet_link_tag "/assets/locales/#{I18n.locale}" %>
-    
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
+    <%= render 'layouts/head' %>
   </head>
 
   <body>
-    <header>
-      <div class="container">
-        <div class="logo"><%= link_to t('app_name'), root_path %></div>
-        <nav>
-          <ul>
-            <% if logged_in? %>
-              <li><%= link_to @current_user.username, user_path(@current_user) %>
-              <li><%= link_to t('logout'), logout_path, method: :delete %>
-            <% else %>
-              <li><%= link_to t('login'), login_path %></li>
-              <li><%= link_to t('signup'), signup_path, class: "signup button btn-regular" %></li>
-            <% end %>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    
+    <%= render 'layouts/header' %>
+
     <% if flash[:alert] %>
       <div class="container"<
         <div class="alert"><%= flash[:alert] %></div>
       </div>
     <% end %>
-    
+
     <main>
       <div class="container">
         <%= yield %>
       </div>
     </main>
-    
-    <footer>
-      <div class="container">
-        <div id="language_menu">
-          <%= link_to "English", root_path(locale: :en) %> | <%= link_to "日本語", root_path(locale: :ja) %>
-        </div>
-        
-        <% if logged_in? %>
-          <div id="login_status">
-            <%= t('login_status', username: current_user.username) %>
-          </div>
-        <% end %>
-      </div>
-    </footer>
+
+    <%= render 'layouts/footer' %>
+
   </body>
 </html>
