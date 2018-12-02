@@ -1,0 +1,70 @@
+/* Layout */
+/* ------------------------------- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header */
+/* ------------------------------- */
+header {
+  padding: 20px 0;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  
+}
+
+nav ul {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 0.5em;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav .signup {
+  background: #0277BD;
+  border-radius: 5px;
+  padding: 5px 10px 7px;
+}
+
+nav .signup a {
+  color: white;
+}
+
+
+/* Footer */
+/* ------------------------------- */
+
+
+/* Responsive */
+/* ------------------------------- */
+@media screen and (max-width: 1000px) {
+  .container {
+    padding: 0 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 0 0.5em;
+  }
+}

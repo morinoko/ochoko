@@ -4,20 +4,55 @@
     <title>Ochoko</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% if I18n.locale == :ja %>
+      <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&amp;subset=japanese" %>
+    <% else %>
+      <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700" %>
+    <% end %>
+    <%= stylesheet_link_tag "/assets/locales/#{I18n.locale}" %>
+    
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
   </head>
 
   <body>
+    <header>
+      <div class="container">
+        <div class="logo"><%= link_to t('app_name'), root_path %></div>
+        <nav>
+          <ul>
+            <% if logged_in? %>
+              <li><%= link_to t('logout'), logout_path, method: :delete %>
+            <% else %>
+              <li><%= link_to t('login'), login_path %></li>
+              <li class="signup"><%= link_to t('signup'), signup_path %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
     <% if flash[:alert] %>
-      <div class="alert"><%= flash[:alert] %></div>
+      <div class="container"<
+        <div class="alert"><%= flash[:alert] %></div>
+      </div>
     <% end %>
     
-    <%= yield %>
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
     
     <footer>
-      <%= link_to(t('logout'), logout_path, method: :delete) if logged_in? %>
+      <div class="container">
+        <%= link_to(t('logout'), logout_path, method: :delete) if logged_in? %>
+      </div>
     </footer>
   </body>
 </html>
