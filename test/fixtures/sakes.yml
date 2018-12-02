@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  japanese_name: MyString
+  romanized_name: MyString
+  type: 
+  brewery_id: 1
+
+two:
+  japanese_name: MyString
+  romanized_name: MyString
+  type: 
+  brewery_id: 1

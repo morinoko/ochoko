@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   scope "(:locale)", locale: /en|ja/ do
     resources :users, only: [:create, :show]
+    resources :sakes
+    resources :breweries
       
     # Signup/Login
     get '/signup' => "users#new"
