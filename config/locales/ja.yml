@@ -1,10 +1,13 @@
 ja:
-  hello: "ハロー！"
+  app_name: "おちょこ"
   signup: "登録する"
   login: "ログインする"
   logout: "ログアウト"
   facebook_login: "フェスブックでログインする"
   login_required: "ログインが必要です。"
+    
+  welcome:
+    catchphrase: "マイ日本酒手帖"
   
   activerecord:
     models:

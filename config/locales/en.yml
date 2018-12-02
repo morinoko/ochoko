@@ -30,12 +30,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_name: "Ochoko"
   signup: "Sign up"
   login: "Login"
   logout: "Logout"
   facebook_login: "Log in with Facebook"
   login_required: "You need to be logged in to do that."
+  
+  welcome:
+    catchphrase: "Your personal sake tasting notebook."
 
   activerecord:
     models:
