@@ -50,9 +50,29 @@ nav .signup a {
   color: white;
 }
 
+/* Main */
+/* ------------------------------- */
+main {
+  padding-bottom: 3em;
+}
 
 /* Footer */
 /* ------------------------------- */
+footer {
+  background: #424242;
+  text-align: center;
+  color: white;
+  padding: 3em 0;
+}
+
+#language_menu a {
+  color: white;
+}
+
+footer #login_status {
+  font-size: 85%;
+  margin-top: 2em;
+}
 
 
 /* Responsive */
