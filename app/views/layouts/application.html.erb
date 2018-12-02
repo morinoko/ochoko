@@ -58,7 +58,7 @@
         
         <% if logged_in? %>
           <div id="login_status">
-            <%= t('login_status', username: @current_user.username) %>
+            <%= t('login_status', username: current_user.username) %>
           </div>
         <% end %>
       </div>
