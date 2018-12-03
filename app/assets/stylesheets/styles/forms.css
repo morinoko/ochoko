@@ -50,3 +50,7 @@ input[type="password"] {
 #form-signup #facebook-login {
   padding: 2em 0;
 }
+
+#form-login #login-error {
+  
+}

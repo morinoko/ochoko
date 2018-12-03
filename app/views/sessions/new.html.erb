@@ -1,6 +1,10 @@
 <div id="form-login">
   <h1><%= t('login') %></h1>
   
+  <% if flash[:error] %>
+    <div id="login-error" class="alert error"><%= flash[:error] %></div>
+  <% end %>
+  
   <%= form_for(:session, url: login_path) do |f| %>
     <div class="form-group">
       <%= f.label :email, t('activerecord.attributes.user.email') %>

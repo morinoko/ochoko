@@ -6,6 +6,9 @@ ja:
   facebook_login: "フェスブックでログインする"
   login_required: "ログインが必要です。"
   login_status: "%{username}でログインしています。"
+  
+  sessions:
+    login_error: "メールまたはパスワードが正しくありません。"
     
   welcome:
     index:

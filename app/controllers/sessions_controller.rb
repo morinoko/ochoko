@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
         
         redirect_to user_path(user)
       else
+        flash[:error] = t('.login_error')
         render :new
       end
     end

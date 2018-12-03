@@ -38,6 +38,9 @@ en:
   login_required: "You need to be logged in to do that."
   login_status: "Logged in as %{username}."
   
+  sessions:
+    login_error: "Your email or password is incorrect."
+  
   welcome:
     index:
       catchphrase: "Your personal sake tasting notebook."

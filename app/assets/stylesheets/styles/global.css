@@ -32,6 +32,23 @@ a.button:hover {
   background-color: #01579B;
 }
 
+/* Alerts */
+/* ------------------------------- */
+
+.alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+  
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
 /* Type */
 /* ------------------------------- */
 h2, h3, h4, h5, h6 {
