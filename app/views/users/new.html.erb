@@ -5,21 +5,37 @@
     <div class="form-group">
       <%= f.label :username %>
       <%= f.text_field :username %>
+      
+      <% if @user.errors[:username].any? %>
+        <%= error_feedback(object: @user, attribute: :username) %>
+      <% end %>
     </div>
     
     <div class="form-group">
       <%= f.label :email %>
       <%= f.email_field :email %>
+      
+      <% if @user.errors[:email].any? %>
+        <%= error_feedback(object: @user, attribute: :email) %>
+      <% end %>
     </div>
     
     <div class="form-group">
       <%= f.label :password %>
       <%= f.password_field :password %>
+      
+      <% if @user.errors[:password].any? %>
+        <%= error_feedback(object: @user, attribute: :password) %>
+      <% end %>
     </div>
       
     <div class="form-group">
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation %>
+      
+      <% if @user.errors[:password_confirmation].any? %>
+        <%= error_feedback(object: @user, attribute: :password_confirmation) %>
+      <% end %>
     </div>
     
     <%= f.submit t('signup'), class: "button btn-regular"  %>
