@@ -7,7 +7,9 @@ label {
     margin-bottom: .5rem;
 }
 
-input {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   display: block;
   width: 100%;
   height: calc(2.25rem + 2px);
@@ -32,4 +34,19 @@ input {
   max-width: 330px;
   padding: 15px;
   margin: auto;
+}
+
+#form-login input[type="submit"],
+#form-signup input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+}
+
+#form-login #facebook-login,
+#form-signup #facebook-login {
+  padding: 2em 0;
 }

@@ -12,10 +12,10 @@
       <%= f.password_field :password %>
     </div>
   
-    <%= f.submit t('login') %>
+    <%= f.submit t('login'), class: "button btn-regular" %>
   <% end %> 
   
-  <div id="facebook_login">
+  <div id="facebook-login">
     <%= link_to t('facebook_login'), '/auth/facebook' %>
   </div>
 </div>

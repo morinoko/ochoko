@@ -30,6 +30,7 @@ html {
 
 body {
   margin: 0;
+  font-size: 1rem;
 }
 
 /**
@@ -46,7 +47,7 @@ main {
  */
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5rem;
   margin: 0.67em 0;
 }
 
@@ -82,7 +83,14 @@ pre {
  */
 
 a {
+  color: #007bff;
+  text-decoration: none;
   background-color: transparent;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
 
 /**
