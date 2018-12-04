@@ -2,10 +2,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   scope "(:locale)", locale: /en|ja/ do
-    resources :users, only: [:create, :show]
-    resources :sakes
-    resources :breweries
-    resources :tasting_notes
+    resources :users, only: [:create, :show] do
+      resources :tasting_notes
+    end
+    
+    resources :breweries do
+      resources :sakes
+    end
       
     # Signup/Login
     get '/signup' => "users#new"
