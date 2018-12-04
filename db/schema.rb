@@ -25,14 +25,14 @@ ActiveRecord::Schema.define(version: 2018_12_02_015004) do
   create_table "sakes", force: :cascade do |t|
     t.string "japanese_name"
     t.string "romanized_name"
-    t.string "type"
+    t.string "sake_type"
     t.integer "brewery_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tasting_notes", force: :cascade do |t|
-    t.integer "star_count"
+    t.integer "rating"
     t.text "comment"
     t.integer "sake_id"
     t.integer "user_id"
