@@ -4,9 +4,9 @@ class Sake < ApplicationRecord
   
   def localized_name
     if I18n.locale == :ja
-      "#{japanese_name} #{type}"
+      "#{japanese_name} #{sake_type}"
     else
-      "#{romanized_name} #{type}"
+      "#{romanized_name} #{sake_type}"
     end
   end
 end
