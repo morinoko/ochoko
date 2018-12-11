@@ -18,13 +18,27 @@ ja:
     show:
       title: "ダッシュボード"
       sake_list_title: "私の日本酒"
+  sakes:
+    new:
+      title: "新しい日本酒の登録"
+      name: "日本酒名"
   
   activerecord:
     models:
       user: "ユーザー"
+      sake: "日本酒"
+      brewery: "酒造"
+      location: "場所"
     attributes:
       user:
         username: "ユーザー名"
         email: "メールアドレス"
         password: "パスワード"
         password_confirmation: "パスワード確認"
+      sake:
+        japanese_name: "日本語"
+        romanized_name: "ローマ字の名前"
+        type: "タイプ"
+      brewery:
+        japanese_name: "日本語名"
+        romanized_name: "ローマ字の名前"

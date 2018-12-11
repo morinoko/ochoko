@@ -6,9 +6,8 @@ Rails.application.routes.draw do
       resources :tasting_notes
     end
     
-    resources :breweries do
-      resources :sakes
-    end
+    resources :breweries
+    resources :sakes
       
     # Signup/Login
     get '/signup' => "users#new"

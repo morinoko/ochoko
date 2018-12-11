@@ -49,13 +49,30 @@ en:
     show:
       title: "My Dashboard"
       sake_list_title: "My Sakes"
+  sakes:
+    new:
+      title: "Add a new sake"
+      name: "Sake Name"
 
   activerecord:
     models:
       user: "User"
+      sake: "Sake"
+      brewery: "Brewery"
+      location: "Location"
     attributes:
       user:
         username: "Username"
         email: "Email"
         password: "Password"
         password_confirmation: "Confirm Password"
+      sake:
+        name: "Sake Name"
+        japanese_name: "Japanese Name"
+        romanized_name: "Romanized Name"
+        type: "Type"
+      brewery:
+        japanese_name: "Japanese Name"
+        hiragana_name: "Hiragana"
+        romanized_name: "Romanized Name"
+        

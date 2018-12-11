@@ -1,0 +1,24 @@
+<h1><%= t('.title') %></h1>
+
+<%= form_for @sake do |f| %>
+  <h3><%= t('.name') %></h3>
+  <div class="form-group">
+    <%= f.label :romanized_name %>
+    <%= f.text_field :romanized_name %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :japanese_name %>
+    <%= f.text_field :japanese_name %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :brewery_id, t('activerecord.models.brewery') %>
+    <%= f.collection_select(:brewery_id, @breweries, :id, :localized_name, include_blank: true) %>
+  </div>
+  
+  <div class="form-group">
+    <%= %>
+    <%= %>
+  </div>
+<% end %>
