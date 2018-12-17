@@ -1,3 +1,7 @@
+form {
+  max-width: 600px;
+}
+
 .form-group {
     margin-bottom: 1rem;
 }
@@ -9,7 +13,8 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+select {
   display: block;
   width: 100%;
   height: calc(2.25rem + 2px);
