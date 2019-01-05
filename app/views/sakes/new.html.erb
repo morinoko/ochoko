@@ -3,13 +3,13 @@
 <%= form_for @sake do |f| %>
   <h3><%= t('.name') %></h3>
   <div class="form-group">
-    <%= f.label :romanized_name %>
-    <%= f.text_field :romanized_name %>
-  </div>
-  
-  <div class="form-group">
     <%= f.label :japanese_name %>
     <%= f.text_field :japanese_name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :romanized_name %>
+    <%= f.text_field :romanized_name %>
   </div>
   
   <div class="form-group">
@@ -18,7 +18,9 @@
   </div>
   
   <div class="form-group">
-    <%= %>
-    <%= %>
+    <%= f.label :grade %>
+    <%= f.select(:grade, sake_grades_for_select, include_blank: true) %>
   </div>
+  
+  <%= f.submit t('.add'), class: "button btn-regular"  %>
 <% end %>

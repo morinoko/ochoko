@@ -22,6 +22,7 @@ ja:
     new:
       title: "新しい日本酒の登録"
       name: "日本酒名"
+      add: "登録する"
   
   activerecord:
     models:
@@ -37,8 +38,8 @@ ja:
         password_confirmation: "パスワード確認"
       sake:
         japanese_name: "日本語"
-        romanized_name: "ローマ字の名前"
-        type: "タイプ"
+        romanized_name: "ローマ字"
+        grade: "タイプ"
       brewery:
         japanese_name: "日本語名"
         romanized_name: "ローマ字の名前"
