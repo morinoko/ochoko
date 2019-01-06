@@ -38,8 +38,10 @@ ja:
         password_confirmation: "パスワード確認"
       sake:
         japanese_name: "日本語"
+        hiragana_name: "ひらがな"
         romanized_name: "ローマ字"
-        grade: "タイプ"
+        grade: "特定名称"
+        sake_type: "タイプ・種類"
       brewery:
         japanese_name: "日本語名"
         romanized_name: "ローマ字の名前"

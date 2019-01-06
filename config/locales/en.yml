@@ -70,8 +70,10 @@ en:
       sake:
         name: "Sake Name"
         japanese_name: "Japanese Name"
+        hiragana_name: "Name in Hiragana"
         romanized_name: "Romanized Name"
         grade: "Grade"
+        sake_type: "Type/Style"
       brewery:
         japanese_name: "Japanese Name"
         hiragana_name: "Hiragana"
