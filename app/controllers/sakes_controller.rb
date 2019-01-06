@@ -1,17 +1,18 @@
 class SakesController < ApplicationController
+  before_action :set_sake, only: [:show, :edit]
+  before_action :set_breweries, only: [:new, :edit]
+
   def index
     @sakes = Sake.all
   end
-  
+
   def show
-    @sake = Sake.find_by(id: params[:id])
   end
-  
+
   def new
     @sake = Sake.new
-    @breweries = Brewery.all
   end
-  
+
   def create
     @sake = Sake.new(sake_params)
     
@@ -21,9 +22,12 @@ class SakesController < ApplicationController
       render :new
     end
   end
-  
+
+  def edit
+  end
+
   private
-  
+
   def sake_params
     params.require(:sake).permit(:japanese_name,
                                  :hiragana_name,
@@ -33,5 +37,12 @@ class SakesController < ApplicationController
                                  :grade,
                                  :brewery_id)
   end
-  
+
+  def set_sake
+    @sake = Sake.find_by(id: params[:id])
+  end
+
+  def set_breweries
+    @breweries = Brewery.all
+  end
 end
