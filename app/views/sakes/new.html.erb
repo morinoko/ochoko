@@ -17,9 +17,15 @@
     <%= f.text_field :romanized_name %>
   </div>
   
+  <h3><%= t('.sake_type') %></h3>
   <div class="form-group">
-    <%= f.label :brewery_id, t('activerecord.models.brewery') %>
-    <%= f.collection_select(:brewery_id, @breweries, :id, :localized_name, include_blank: true) %>
+    <%= f.label :sake_type_japanese %>
+    <%= f.text_field :sake_type_japanese %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :sake_type_romanized %>
+    <%= f.text_field :sake_type_romanized %>
   </div>
   
   <div class="form-group">
@@ -28,8 +34,8 @@
   </div>
   
   <div class="form-group">
-    <%= f.label :sake_type %>
-    <%= f.text_field :sake_type %>
+    <%= f.label :brewery_id, t('activerecord.models.brewery') %>
+    <%= f.collection_select(:brewery_id, @breweries, :id, :localized_name, include_blank: true) %>
   </div>
   
   <%= f.submit t('.add'), class: "button btn-regular"  %>

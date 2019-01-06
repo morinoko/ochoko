@@ -1,0 +1,4 @@
+<h1>All Sakes</h1>
+<% @sakes.each do |sake| %>
+  <h2><%= link_to sake.localized_name, sake %></h2>
+<% end %>

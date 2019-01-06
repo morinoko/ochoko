@@ -54,6 +54,7 @@ en:
       title: "Add a new sake"
       name: "Sake Name"
       add: "Add sake"
+      sake_type: "Type/Style"
 
   activerecord:
     models:
@@ -73,7 +74,9 @@ en:
         hiragana_name: "Name in Hiragana"
         romanized_name: "Romanized Name"
         grade: "Grade"
-        sake_type: "Type/Style"
+        sake_type_japanese: "Japanese"
+        sake_type_english: "Romanized"
+  
       brewery:
         japanese_name: "Japanese Name"
         hiragana_name: "Hiragana"
