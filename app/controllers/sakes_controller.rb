@@ -1,4 +1,8 @@
 class SakesController < ApplicationController
+  def index
+    @sakes = Sake.all
+  end
+  
   def show
     @sake = Sake.find_by(id: params[:id])
   end
@@ -12,7 +16,7 @@ class SakesController < ApplicationController
     @sake = Sake.new(sake_params)
     
     if @sake.save
-      raise @sake.inspect
+      redirect_to @sake
     else
       render :new
     end
@@ -21,7 +25,13 @@ class SakesController < ApplicationController
   private
   
   def sake_params
-    params.require(:sake).permit(:japanese_name, :hiragana_name, :romanized_name, :grade, :sake_type, :brewery_id)
+    params.require(:sake).permit(:japanese_name,
+                                 :hiragana_name,
+                                 :romanized_name,
+                                 :sake_type_japanese,
+                                 :sake_type_romanized,
+                                 :grade,
+                                 :brewery_id)
   end
   
 end
