@@ -52,6 +52,7 @@ en:
   sakes:
     new:
       title: "Add a new sake"
+    form:
       name: "Sake Name"
       add: "Add sake"
       sake_type: "Type/Style"
@@ -74,8 +75,8 @@ en:
         hiragana_name: "Name in Hiragana"
         romanized_name: "Romanized Name"
         grade: "Grade"
-        sake_type_japanese: "Japanese"
-        sake_type_english: "Romanized"
+        sake_type_japanese: "Type/Style in Japanese"
+        sake_type_romanized: "Type/Style Romanized"
   
       brewery:
         japanese_name: "Japanese Name"

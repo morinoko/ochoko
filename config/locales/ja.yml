@@ -21,6 +21,7 @@ ja:
   sakes:
     new:
       title: "新しい日本酒の登録"
+    form:
       name: "日本酒名"
       add: "登録する"
       sake_type: "タイプ・種類"
@@ -43,7 +44,7 @@ ja:
         romanized_name: "ローマ字"
         grade: "特定名称"
         sake_type_japanese: "日本語"
-        sake_type_english: "ローマ字"
+        sake_type_romanized: "ローマ字"
       brewery:
         japanese_name: "日本語名"
         romanized_name: "ローマ字の名前"
