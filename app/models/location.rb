@@ -12,6 +12,14 @@ class Location < ApplicationRecord
     self.prefecture.name
   end
   
+  def localized_name
+    if I18n.locale == :ja
+      japanese_name
+    else
+      romanized_name
+    end
+  end
+  
   # Other JpPrefecture data can be accesssed by these methods:
   # location.prefecture.code => 13
   # location.prefecture.name_h => "とうきょうと"
