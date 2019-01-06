@@ -8,6 +8,16 @@ class SakesController < ApplicationController
     @breweries = Brewery.all
   end
   
+  def create
+    @sake = Sake.new(sake_params)
+    
+    if @sake.save
+      raise @sake.inspect
+    else
+      render :new
+    end
+  end
+  
   private
   
   def sake_params
