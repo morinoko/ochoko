@@ -21,19 +21,35 @@ class Sake < ApplicationRecord
                           english: "Junmai Daiginjō" }
   }
 
-  def localized_name
-    if I18n.locale == :ja
-      "#{japanese_name} #{sake_type}"
-    else
-      "#{romanized_name} #{sake_type}"
-    end
-  end
-
   def self.grades_english
     GRADES.map { |key, value| GRADES[key][:english] }
   end
 
   def self.grades_japanese
     GRADES.map { |key, value| GRADES[key][:japanese] }
+  end
+  
+  def localized_name
+    localized_name = I18n.locale == :ja ? japanese_name : romanized_name
+    
+    localized_name += " #{localized_sake_type}" if localized_sake_type
+    
+    localized_name += " (#{localized_grade})" if grade
+  end
+  
+  def localized_grade
+    if I18n.locale == :ja
+      Sake::GRADES[self.grade.to_sym][:japanese]
+    else
+      Sake::GRADES[self.grade.to_sym][:english]
+    end
+  end
+  
+  def localized_sake_type
+    if I18n.locale == :ja
+      sake_type_japanese
+    else
+      sake_type_romanized
+    end
   end
 end
