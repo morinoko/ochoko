@@ -54,6 +54,7 @@ en:
       title: "All sakes"
     show:
       edit: "Edit sake"
+      back: "See all sakes"
     new:
       title: "Add a new sake"
     edit:

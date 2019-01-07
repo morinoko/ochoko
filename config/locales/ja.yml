@@ -25,6 +25,7 @@ ja:
       title: "新しい日本酒の登録"
     show:
       edit: "日本酒を編集する"
+      back: "日本酒の一覧を見る"
     edit:
       title: "日本酒の編集"
     form:

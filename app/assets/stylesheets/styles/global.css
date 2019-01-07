@@ -5,6 +5,8 @@
   margin: 0 auto;
 }
 
+/* Buttons */
+/* ------------------------------- */
 .button {
   padding: 7px 1.5em 8px;
   border-radius: 5px;
@@ -49,7 +51,7 @@ a.button:hover {
   border-color: #f5c6cb;
 }
 
-/* Type */
+/* Type/Fonts */
 /* ------------------------------- */
 h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
@@ -146,6 +148,12 @@ footer #login_status {
   margin-top: 2em;
 }
 
+/* General */
+/* ------------------------------- */
+.list-link {
+  text-align: center;
+  margin-top: 3em;
+}
 
 /* Responsive */
 /* ------------------------------- */

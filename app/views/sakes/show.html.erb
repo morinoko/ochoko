@@ -2,3 +2,7 @@
 <p><%= @sake.brewery.localized_name %> | <%= @sake.brewery.location.localized_name %></p>
 
 <%= link_to t('.edit'), edit_sake_path(@sake) %>
+
+<div class="list-link">
+  <%= link_to t('.back'), sakes_path %>
+</div>
