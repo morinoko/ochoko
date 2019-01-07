@@ -52,10 +52,13 @@ en:
   sakes:
     new:
       title: "Add a new sake"
+    edit:
+      title: "Edit sake"
     form:
       name: "Sake Name"
-      add: "Add sake"
       sake_type: "Type/Style"
+      choose_brewery: "At which brewery was this sake made?"
+      submit: "Save"
 
   activerecord:
     models:

@@ -1,6 +1,6 @@
 class SakesController < ApplicationController
   before_action :set_sake, only: [:show, :edit, :update]
-  before_action :set_breweries, only: [:new, :edit]
+  before_action :set_breweries, only: [:new, :edit, :update]
 
   def index
     @sakes = Sake.all
