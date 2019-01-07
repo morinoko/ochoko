@@ -1,5 +1,5 @@
 class SakesController < ApplicationController
-  before_action :set_sake, only: [:show, :edit]
+  before_action :set_sake, only: [:show, :edit, :update]
   before_action :set_breweries, only: [:new, :edit]
 
   def index
@@ -15,7 +15,7 @@ class SakesController < ApplicationController
 
   def create
     @sake = Sake.new(sake_params)
-    
+
     if @sake.save
       redirect_to @sake
     else
@@ -24,6 +24,14 @@ class SakesController < ApplicationController
   end
 
   def edit
+  end
+  
+  def update
+    if @sake.update(sake_params)
+      redirect_to @sake
+    else
+      render :edit
+    end
   end
 
   private
