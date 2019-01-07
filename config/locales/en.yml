@@ -50,6 +50,8 @@ en:
       title: "My Dashboard"
       sake_list_title: "My Sakes"
   sakes:
+    show:
+      edit: "Edit sake"
     new:
       title: "Add a new sake"
     edit:

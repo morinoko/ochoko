@@ -1,2 +1,4 @@
 <h1><%= @sake.localized_name %></h1>
 <p><%= @sake.brewery.localized_name %> | <%= @sake.brewery.location.localized_name %></p>
+
+<%= link_to t('.edit'), edit_sake_path(@sake) %>

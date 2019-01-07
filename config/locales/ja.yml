@@ -21,6 +21,8 @@ ja:
   sakes:
     new:
       title: "新しい日本酒の登録"
+    show:
+      edit: "日本酒を編集する"
     edit:
       title: "日本酒の編集"
     form:
