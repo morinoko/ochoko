@@ -19,6 +19,8 @@ ja:
       title: "ダッシュボード"
       sake_list_title: "私の日本酒"
   sakes:
+    index:
+      title: "日本酒の一覧"
     new:
       title: "新しい日本酒の登録"
     show:

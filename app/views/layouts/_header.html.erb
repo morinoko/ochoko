@@ -4,6 +4,7 @@
     <nav>
       <ul>
         <% if logged_in? %>
+          <li><%= link_to t('sakes.index.title'), sakes_path %></li> |
           <li><%= link_to current_user.username, user_path(current_user) %>
           <li><%= link_to t('logout'), logout_path, method: :delete %>
         <% else %>
