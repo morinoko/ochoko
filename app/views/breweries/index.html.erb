@@ -1,4 +1,10 @@
 <h1><%= t('.title') %></h1>
-<% @breweries.each do |brewery| %>
-  <h2><%= link_to brewery.localized_name, brewery %></h2>
+<% @locations.each do |location| %>
+  <% if location.breweries.any? %>
+    <h2><%= location.localized_name %></h2>
+    
+    <% location.breweries.each do |brewery| %>
+      <h2><%= link_to brewery.localized_name, brewery %></h2>
+    <% end %>
+  <% end %>
 <% end %>
