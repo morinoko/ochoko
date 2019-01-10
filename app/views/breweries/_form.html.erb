@@ -12,6 +12,10 @@
   <div class="form-group">
     <%= f.label :hiragana_name %>
     <%= f.text_field :hiragana_name %>
+    
+    <% if @brewery.errors[:hiragana_name].any? %>
+      <%= error_feedback(object: @brewery, attribute: :hiragana_name) %>
+    <% end %>
   </div>
 
   <div class="form-group">
@@ -26,7 +30,11 @@
   <h3><%= t('activerecord.models.location') %></h3>
   <div class="form-group">
     <%= f.label :location_id, t('.choose_location') %>
-    <%= f.collection_select(:location_id, Location.all, :id, :localized_name, include_blank: true) %>
+    <%= f.collection_select(:location_id, @locations, :id, :localized_name, include_blank: true) %>
+    
+    <% if @brewery.errors[:location_id].any? %>
+      <%= error_feedback(object: @brewery, attribute: :location_id) %>
+    <% end %>
   </div>
   
   <%= f.submit t('.submit'), class: "button btn-regular"  %>
