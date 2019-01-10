@@ -38,6 +38,12 @@ ja:
       title: "酒造の一覧"
     show:
       back: "酒造の一覧を見る"
+    new:
+      title: "新しい酒造を登録する"
+    form:
+      name: "酒造名"
+      choose_location: "この酒造はどのにありますか？"
+      submit: "保存する"
   
   activerecord:
     models:
@@ -59,8 +65,10 @@ ja:
         sake_type_japanese: "日本語"
         sake_type_romanized: "ローマ字"
       brewery:
-        japanese_name: "日本語名"
-        romanized_name: "ローマ字の名前"
+        japanese_name: "日本語"
+        hiragana_name: "ひらがな"
+        romanized_name: "ローマ字"
+        
   
   errors:
     messages:

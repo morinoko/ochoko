@@ -9,6 +9,10 @@ class BreweriesController < ApplicationController
   def show
   end
   
+  def new
+    @brewery = Brewery.new
+  end
+  
   private
   
   def set_brewery

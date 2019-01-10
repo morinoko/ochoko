@@ -1,0 +1,34 @@
+<%= form_for @brewery do |f| %>
+  <h3><%= t('.name') %></h3>
+  <div class="form-group">
+    <%= f.label :japanese_name %>
+    <%= f.text_field :japanese_name %>
+    
+    <% if @brewery.errors[:japanese_name].any? %>
+      <%= error_feedback(object: @brewery, attribute: :japanese_name) %>
+    <% end %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :hiragana_name %>
+    <%= f.text_field :hiragana_name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :romanized_name %>
+    <%= f.text_field :romanized_name %>
+    
+    <% if @brewery.errors[:romanized_name].any? %>
+      <%= error_feedback(object: @brewery, attribute: :romanized_name) %>
+    <% end %>
+  </div>
+  
+  <h3><%= t('activerecord.models.location') %></h3>
+  <div class="form-group">
+    <%= f.label :location_id, t('.choose_location') %>
+    <%= f.collection_select(:location_id, Location.all, :id, :localized_name, include_blank: true) %>
+  </div>
+  
+  <%= f.submit t('.submit'), class: "button btn-regular"  %>
+
+<% end %>
