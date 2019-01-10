@@ -64,6 +64,11 @@ en:
       sake_type: "Type/Style"
       choose_brewery: "At which brewery was this sake made?"
       submit: "Save"
+  breweries:
+    index:
+      title: "All Breweries"
+    show:
+      back: "See all breweries"
 
   activerecord:
     models:

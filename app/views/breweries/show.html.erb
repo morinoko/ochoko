@@ -1,0 +1,8 @@
+<h1><%= @brewery.localized_name %></h1>
+<p><%= @brewery.location.localized_name %></p>
+
+<%= link_to t('.edit'), edit_brewery_path(@brewery) %>
+
+<div class="list-link">
+  <%= link_to t('.back'), breweries_path %>
+</div>

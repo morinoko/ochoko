@@ -33,6 +33,11 @@ ja:
       sake_type: "タイプ・種類"
       choose_brewery: "この日本酒はどこの酒造で作られていますか？"
       submit: "保存する"
+  breweries:
+    index:
+      title: "酒造の一覧"
+    show:
+      back: "酒造の一覧を見る"
   
   activerecord:
     models:
