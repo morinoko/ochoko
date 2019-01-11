@@ -40,6 +40,8 @@ ja:
       back: "酒造の一覧を見る"
     new:
       title: "新しい酒造を登録する"
+    edit:
+      title: "酒造を編集する"
     form:
       name: "酒造名"
       choose_location: "この酒造はどのにありますか？"

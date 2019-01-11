@@ -71,6 +71,8 @@ en:
       back: "See all breweries"
     new:
       title: "Add a new brewery"
+    edit:
+      title: "Edit brewery"
     form:
       name: "Brewery Name"
       choose_location: "Where is this brewery located?"
