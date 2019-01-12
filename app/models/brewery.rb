@@ -3,8 +3,12 @@ class Brewery < ApplicationRecord
   has_many :sakes
   
   validates :japanese_name, presence: true
+  validates :japanese_name, uniqueness: { scope: :location_id,
+                                          message: I18n.t(:taken, scope: 'activerecord.errors.models.brewery') }
   validates :hiragana_name, presence: true
   validates :romanized_name, presence: true
+  validates :romanized_name, uniqueness: { scope: :location_id,
+                                          message: I18n.t(:taken, scope: 'activerecord.errors.models.brewery') }
   validates :location_id, presence: true
   
   def localized_name

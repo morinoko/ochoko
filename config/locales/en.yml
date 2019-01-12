@@ -99,9 +99,11 @@ en:
         grade: "Grade"
         sake_type_japanese: "Type/Style in Japanese"
         sake_type_romanized: "Type/Style Romanized"
-  
       brewery:
         japanese_name: "Japanese Name"
         hiragana_name: "Hiragana"
         romanized_name: "Romanized Name"
-        
+    errors:
+      models:
+        brewery:
+          taken: "is already registered for the selected location."

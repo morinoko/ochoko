@@ -6,14 +6,14 @@ ja:
   facebook_login: "フェスブックでログインする"
   login_required: "ログインが必要です。"
   login_status: "%{username}でログインしています。"
-  
+
   sessions:
     login_error: "メールまたはパスワードが正しくありません。"
-    
+
   welcome:
     index:
       catchphrase: "マイ日本酒手帖"
-            
+
   users:
     show:
       title: "ダッシュボード"
@@ -47,7 +47,7 @@ ja:
       name: "酒造名"
       choose_location: "この酒造はどのにありますか？"
       submit: "保存する"
-  
+
   activerecord:
     models:
       user: "ユーザー"
@@ -71,8 +71,10 @@ ja:
         japanese_name: "日本語"
         hiragana_name: "ひらがな"
         romanized_name: "ローマ字"
+    errors:
+      messages:
+        blank: "は必須です。"
+      models:
+        brewery:
+          taken: "【この名前はすでに選択した県に登録されています。】"
         
-  
-  errors:
-    messages:
-      blank: "は必須です。"
