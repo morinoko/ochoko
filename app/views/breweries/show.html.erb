@@ -3,6 +3,14 @@
 
 <%= link_to t('.edit'), edit_brewery_path(@brewery) %>
 
+<h2><%= t('.sakes') %></h2>
+
+<ul>
+<% @brewery.sakes.each do |sake| %>
+  <li><%= link_to sake.localized_name, sake_path(sake) %></li>
+<% end %>
+</ul>
+
 <div class="list-link">
   <%= link_to t('.back'), breweries_path %>
 </div>

@@ -69,6 +69,7 @@ en:
       title: "All Breweries"
     show:
       back: "See all breweries"
+      sakes: "Sakes made by this brewery"
     new:
       title: "Add a new brewery"
     edit:

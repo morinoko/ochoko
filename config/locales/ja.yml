@@ -38,6 +38,7 @@ ja:
       title: "酒造の一覧"
     show:
       back: "酒造の一覧を見る"
+      sakes: "この酒造のお酒"
     new:
       title: "新しい酒造を登録する"
     edit:
