@@ -1,6 +1,7 @@
 class SakesController < ApplicationController
   before_action :set_sake, only: [:show, :edit, :update]
   before_action :set_breweries, only: [:new, :edit, :update]
+  before_action :require_login, except: [:index, :show]
 
   def index
     @sakes = Sake.all

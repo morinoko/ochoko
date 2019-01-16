@@ -1,6 +1,7 @@
 class BreweriesController < ApplicationController
   before_action :set_brewery, only: [:show, :edit, :update]
   before_action :set_locations, only: [:new, :edit]
+  before_action :require_login, except: [:index, :show]
 
   def index
     @locations = Location.all
