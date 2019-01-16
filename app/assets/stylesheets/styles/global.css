@@ -43,6 +43,9 @@ a.button:hover {
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: .25rem;
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
 }
   
 .error {
