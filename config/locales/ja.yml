@@ -6,6 +6,10 @@ ja:
   facebook_login: "フェスブックでログインする"
   login_required: "ログインが必要です。"
   login_status: "%{username}でログインしています。"
+  
+  header:
+    sake: "日本酒"
+    breweries: "酒造"
 
   sessions:
     login_error: "メールまたはパスワードが正しくありません。"

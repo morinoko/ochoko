@@ -3,8 +3,9 @@
     <div class="logo"><%= link_to t('app_name'), root_path %></div>
     <nav>
       <ul>
+        <li><%= link_to t('header.sake'), sakes_path %></li> |
+        <li><%= link_to t('header.breweries'), breweries_path %></li> |
         <% if logged_in? %>
-          <li><%= link_to t('sakes.index.title'), sakes_path %></li> |
           <li><%= link_to current_user.username, user_path(current_user) %>
           <li><%= link_to t('logout'), logout_path, method: :delete %>
         <% else %>

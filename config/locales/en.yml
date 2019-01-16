@@ -38,6 +38,10 @@ en:
   login_required: "You need to be logged in to do that."
   login_status: "Logged in as %{username}."
   
+  header:
+    sake: "Sake"
+    breweries: "Breweries"
+  
   sessions:
     login_error: "Your email or password is incorrect."
   
