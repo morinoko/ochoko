@@ -1,7 +1,7 @@
 <h1><%= @brewery.localized_name %></h1>
 <p><%= @brewery.location.localized_name %></p>
 
-<%= link_to t('.edit'), edit_brewery_path(@brewery) %>
+<%= link_to t('.edit'), edit_brewery_path(@brewery) if logged_in? %>
 
 <h2><%= t('.sakes') %></h2>
 

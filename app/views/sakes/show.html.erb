@@ -1,7 +1,7 @@
 <h1><%= @sake.localized_name %></h1>
 <p><%= link_to @sake.brewery.localized_name, brewery_path(@sake.brewery) %> | <%= @sake.brewery.location.localized_name %></p>
 
-<%= link_to t('.edit'), edit_sake_path(@sake) %>
+<%= link_to t('.edit'), edit_sake_path(@sake) if logged_in? %>
 
 <div class="list-link">
   <%= link_to t('.back'), sakes_path %>
