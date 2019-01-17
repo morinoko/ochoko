@@ -1,5 +1,6 @@
 class TastingNotesController < ApplicationController
-  before_action :set_current_user, only: [:new, :create]
+  before_action :set_current_user, only: [:new, :create, :edit, :update]
+  before_action :set_sakes, only: [:new, :edit]
 
   def index
   end
@@ -9,7 +10,6 @@ class TastingNotesController < ApplicationController
   end
 
   def new
-    @sakes = Sake.all
     @tasting_note = @user.tasting_notes.build
   end
 
@@ -23,6 +23,20 @@ class TastingNotesController < ApplicationController
       render :new
     end
   end
+  
+  def edit
+    @tasting_note = TastingNote.find_by(id: params[:id])
+  end
+  
+  def update
+    @tasting_note = TastingNote.find_by(id: params[:id])
+    
+    if @tasting_note.update(tasting_note_params)
+      redirect_to user_tasting_note_path(@user, @tasting_note)
+    else
+      render :edit
+    end
+  end
 
   private
 
@@ -32,5 +46,9 @@ class TastingNotesController < ApplicationController
 
   def set_current_user
     @user = current_user
+  end
+  
+  def set_sakes
+    @sakes = Sake.all
   end
 end

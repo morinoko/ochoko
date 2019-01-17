@@ -54,6 +54,8 @@ ja:
   tasting_notes:
     new:
       title: "新しいティースティングノートを書く"
+    edit:
+      title: "ティースティングノートを編集する"
     form:
       sake_label: "どの日本酒を飲みましたか？"
       submit: "保存する"

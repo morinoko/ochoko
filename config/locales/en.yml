@@ -85,6 +85,8 @@ en:
   tasting_notes:
     new:
       title: "Add a new tasting note"
+    edit:
+      title: "Edit tasting note"
     form:
       sake_label: "Which sake are you rating?"
       submit: "Save"
