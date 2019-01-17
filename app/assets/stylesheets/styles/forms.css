@@ -14,7 +14,8 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-select {
+select,
+textarea {
   display: block;
   width: 100%;
   height: calc(2.25rem + 2px);
@@ -27,6 +28,22 @@ select {
   border: 1px solid #ced4da;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+textarea {
+  height: auto;
+}
+
+input[type="range"] {
+    display: block;
+    width: 100%;
+}
+
+.range_values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+  padding-top: 0.5em;
 }
 
 .field_with_errors input {
