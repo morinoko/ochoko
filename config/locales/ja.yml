@@ -51,12 +51,19 @@ ja:
       name: "酒造名"
       choose_location: "この酒造はどのにありますか？"
       submit: "保存する"
+  tasting_notes:
+    new:
+      title: "新しいティースティングノートを書く"
+    form:
+      sake_label: "どの日本酒を飲みましたか？"
+      submit: "保存する"
 
   activerecord:
     models:
       user: "ユーザー"
       sake: "日本酒"
       brewery: "酒造"
+      tasting_note: "ティースティングノート"
       location: "場所"
     attributes:
       user:
@@ -75,6 +82,9 @@ ja:
         japanese_name: "日本語"
         hiragana_name: "ひらがな"
         romanized_name: "ローマ字"
+      tasting_note:
+        rating: "スコア"
+        comment: "ノート"
     errors:
       messages:
         blank: "は必須です。"

@@ -82,12 +82,19 @@ en:
       name: "Brewery Name"
       choose_location: "Where is this brewery located?"
       submit: "Save"
+  tasting_notes:
+    new:
+      title: "Add a new tasting note"
+    form:
+      sake_label: "Which sake are you rating?"
+      submit: "Save"
 
   activerecord:
     models:
       user: "User"
       sake: "Sake"
       brewery: "Brewery"
+      tasting_note: "Tasting Note"
       location: "Location"
     attributes:
       user:
@@ -107,6 +114,9 @@ en:
         japanese_name: "Japanese Name"
         hiragana_name: "Hiragana"
         romanized_name: "Romanized Name"
+      tasting_note:
+        rating: "Rating"
+        comment: "Notes"
     errors:
       models:
         brewery:
