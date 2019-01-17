@@ -11,7 +11,9 @@ class ApplicationController < ActionController::Base
   end
   
   def require_login
-    flash[:alert] = t('login_required')
-    redirect_to login_path unless logged_in?
+    unless logged_in?
+      flash[:alert] = t('login_required')
+      redirect_to login_path
+    end
   end
 end
