@@ -1,18 +1,3 @@
-<h1>New Tasting Note</h1>
+<h1><%= t('.title') %></h1>
 
-<%= form_for [@user, @tasting_note] do |f| %>
-  <div class="form-group">
-    <%= f.label :sake_id, "Which sake are you rating?" %>
-    <%= f.collection_select(:sake_id, @sakes, :id, :localized_name, include_blank: true) %>
-  </div>
-  
-  <div class="form-group">
-    <%= f.label :rating %>
-    <%= f.range_field :rating, in: 1..5 %>
-  </div>
-  
-  <div class="form-group">
-    <%= f.label :comment %>
-    <%= f.text_area :comment %>
-  </div>
-<% end %>
+<%= render 'form' %>
