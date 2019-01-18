@@ -6,3 +6,7 @@
   <li><%= link_to note.sake.localized_name, user_tasting_note_path(@user, note) %></li>
 <% end %>
 </ul>
+
+<% if current_user == @user %>
+  <%= link_to t('.add_note'), new_user_tasting_note_path(@user), class: "button btn-regular" %>
+<% end %>
