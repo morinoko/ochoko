@@ -19,7 +19,7 @@ class TastingNotesController < ApplicationController
     if @tasting_note.save
       redirect_to user_tasting_note_path(@user, @tasting_note)
     else
-    # @sakes = Sake.all
+      @sakes = Sake.all
       render :new
     end
   end
@@ -34,6 +34,7 @@ class TastingNotesController < ApplicationController
     if @tasting_note.update(tasting_note_params)
       redirect_to user_tasting_note_path(@user, @tasting_note)
     else
+      @sakes = Sake.all
       render :edit
     end
   end

@@ -83,6 +83,8 @@ en:
       choose_location: "Where is this brewery located?"
       submit: "Save"
   tasting_notes:
+    show:
+      edit: "Edit tasting note"
     new:
       title: "Add a new tasting note"
     edit:
@@ -117,6 +119,7 @@ en:
         hiragana_name: "Hiragana"
         romanized_name: "Romanized Name"
       tasting_note:
+        sake_id: "Sake"
         rating: "Rating"
         comment: "Notes"
     errors:

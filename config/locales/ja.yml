@@ -52,6 +52,8 @@ ja:
       choose_location: "この酒造はどのにありますか？"
       submit: "保存する"
   tasting_notes:
+    show:
+      edit: "ティースティングノートを編集する"
     new:
       title: "新しいティースティングノートを書く"
     edit:
@@ -85,6 +87,7 @@ ja:
         hiragana_name: "ひらがな"
         romanized_name: "ローマ字"
       tasting_note:
+        sake_id: "日本酒"
         rating: "スコア"
         comment: "ノート"
     errors:

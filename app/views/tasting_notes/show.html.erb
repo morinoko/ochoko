@@ -2,3 +2,7 @@
 
 <p>My rating: <%= @tasting_note.rating %></p>
 <p><%= @tasting_note.comment %></p>
+
+<% if logged_in? && current_user == @tasting_note.user %>
+  <%= link_to t('.edit'), edit_user_tasting_note_path(@tasting_note.user, @tasting_note) %>
+<% end %>
