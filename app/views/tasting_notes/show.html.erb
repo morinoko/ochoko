@@ -1,8 +1,12 @@
-<h1>Tasting Note for <%= @tasting_note.sake_id %></h1>
+<h1>Tasting Note for <%= @tasting_note.sake.localized_name %></h1>
 
 <p>My rating: <%= @tasting_note.rating %></p>
 <p><%= @tasting_note.comment %></p>
 
 <% if logged_in? && current_user == @tasting_note.user %>
   <%= link_to t('.edit'), edit_user_tasting_note_path(@tasting_note.user, @tasting_note) %>
+  
+  <div id="delete">
+    <%= link_to t('.delete'), user_tasting_note_path(@tasting_note.user, @tasting_note), method: :delete, data: { confirm: t('.delete_confirmation') } %>
+  </div>
 <% end %>

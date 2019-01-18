@@ -54,6 +54,8 @@ ja:
   tasting_notes:
     show:
       edit: "ティースティングノートを編集する"
+      delete: "削除する"
+      delete_confirmation: "本当に削除しますか？"
     new:
       title: "新しいティースティングノートを書く"
     edit:

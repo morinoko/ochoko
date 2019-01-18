@@ -1,9 +1,6 @@
 class TastingNotesController < ApplicationController
-  before_action :set_current_user, only: [:new, :create, :edit, :update]
+  before_action :set_current_user, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_sakes, only: [:new, :edit]
-
-  def index
-  end
 
   def show
     @tasting_note = TastingNote.find_by(id: params[:id])
@@ -37,6 +34,14 @@ class TastingNotesController < ApplicationController
       @sakes = Sake.all
       render :edit
     end
+  end
+  
+  def destroy
+    @tasting_note = TastingNote.find_by(id: params[:id])
+    
+    @tasting_note.destroy
+    
+    redirect_to user_path(@user)
   end
 
   private

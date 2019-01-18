@@ -85,6 +85,8 @@ en:
   tasting_notes:
     show:
       edit: "Edit tasting note"
+      delete: "Delete note"
+      delete_confirmation: "Are you sure?"
     new:
       title: "Add a new tasting note"
     edit:
