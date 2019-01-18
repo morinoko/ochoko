@@ -2,7 +2,7 @@
   <div class="form-group">
     <%= f.label :sake_id, t('.sake_label') %>
     <%= f.collection_select(:sake_id, @sakes, :id, :localized_name, include_blank: true) %>
-    
+
     <% if @tasting_note.errors[:sake_id].any? %>
       <%= error_feedback(object: @tasting_note, attribute: :sake_id) %>
     <% end %>

@@ -15,7 +15,7 @@ class TastingNotesController < ApplicationController
 
   def create
     @tasting_note = @user.tasting_notes.build(tasting_note_params)
-    
+
     if @tasting_note.save
       redirect_to user_tasting_note_path(@user, @tasting_note)
     else
@@ -23,14 +23,14 @@ class TastingNotesController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
     @tasting_note = TastingNote.find_by(id: params[:id])
   end
-  
+
   def update
     @tasting_note = TastingNote.find_by(id: params[:id])
-    
+
     if @tasting_note.update(tasting_note_params)
       redirect_to user_tasting_note_path(@user, @tasting_note)
     else

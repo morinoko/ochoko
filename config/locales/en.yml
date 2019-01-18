@@ -37,18 +37,18 @@ en:
   facebook_login: "Log in with Facebook"
   login_required: "You need to be logged in to do that."
   login_status: "Logged in as %{username}."
-  
+
   header:
     sake: "Sake"
     breweries: "Breweries"
-  
+
   sessions:
     login_error: "Your email or password is incorrect."
   
   welcome:
     index:
       catchphrase: "Your personal sake tasting notebook."
-      
+
   users:
     show:
       title: "My Dashboard"
