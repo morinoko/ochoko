@@ -52,6 +52,7 @@ ja:
       choose_location: "この酒造はどのにありますか？"
       submit: "保存する"
   tasting_notes:
+    not_found: "ティースティングノートは見つかりませんでした。"
     show:
       edit: "ティースティングノートを編集する"
       delete: "削除する"

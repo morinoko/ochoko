@@ -1,9 +1,17 @@
 class TastingNotesController < ApplicationController
-  before_action :set_current_user, only: [:new, :create, :edit, :update, :destroy]
+  before_action :require_login, only: [:new, :edit]
+  before_action :set_current_user, except: :show
   before_action :set_sakes, only: [:new, :edit]
 
   def show
-    @tasting_note = TastingNote.find_by(id: params[:id])
+    @user = User.find_by(id: params[:user_id])
+    @tasting_note = @user.tasting_notes.find_by(id: params[:id])
+    
+    if @tasting_note.nil?
+      flash[:alert] = t('.not_found')
+      
+      redirect_to user_path(@user)
+    end
   end
 
   def new
@@ -22,7 +30,12 @@ class TastingNotesController < ApplicationController
   end
 
   def edit
-    @tasting_note = TastingNote.find_by(id: params[:id])
+    @tasting_note = @user.tasting_notes.find_by(id: params[:id])
+    
+    if @tasting_note.nil?
+      flash[:alert] = t('.not_found')
+      redirect_to user_path(@user)
+    end
   end
 
   def update
