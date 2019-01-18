@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
+    @tasting_notes = @user.tasting_notes.all
   end
   
   private

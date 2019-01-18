@@ -1,2 +1,8 @@
 <h1><%= t('.title') %></h1>
 <h2><%= t('.sake_list_title') %></h2>
+
+<ul>
+<% @tasting_notes.each do |note| %>
+  <li><%= link_to note.sake.localized_name, user_tasting_note_path(@user, note) %></li>
+<% end %>
+</ul>
