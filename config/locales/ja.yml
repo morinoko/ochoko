@@ -56,6 +56,7 @@ ja:
     not_found: "ティースティングノートは見つかりませんでした。"
     show:
       edit: "ティースティングノートを編集する"
+      go_to_sake: "この日本酒のページを見る"
       delete: "削除する"
       delete_confirmation: "本当に削除しますか？"
     new:

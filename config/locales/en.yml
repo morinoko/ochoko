@@ -87,6 +87,7 @@ en:
     not_found: "Tasting note not found."
     show:
       edit: "Edit tasting note"
+      go_to_sake: "Go to this sake's page"
       delete: "Delete note"
       delete_confirmation: "Are you sure?"
     new:

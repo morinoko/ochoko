@@ -5,6 +5,7 @@
   margin: 0 auto;
 }
 
+
 /* Buttons */
 /* ------------------------------- */
 .button {
@@ -23,6 +24,7 @@ a.button:hover {
   color: white;
 }
 
+
 /* Colors */
 /* ------------------------------- */
 .btn-regular {
@@ -33,6 +35,7 @@ a.button:hover {
 .btn-regular:hover {
   background-color: #01579B;
 }
+
 
 /* Alerts */
 /* ------------------------------- */
@@ -53,6 +56,7 @@ a.button:hover {
   background-color: #f8d7da;
   border-color: #f5c6cb;
 }
+
 
 /* Type/Fonts */
 /* ------------------------------- */
@@ -87,6 +91,7 @@ h5 {
 h6 {
   font-size: 1rem;
 }
+
 
 /* Header */
 /* ------------------------------- */
@@ -127,11 +132,13 @@ nav .signup {
   padding: 5px 10px 7px;
 }
 
+
 /* Main */
 /* ------------------------------- */
 main {
   padding-bottom: 3em;
 }
+
 
 /* Footer */
 /* ------------------------------- */
@@ -151,12 +158,20 @@ footer #login_status {
   margin-top: 2em;
 }
 
+
 /* General */
 /* ------------------------------- */
 .list-link {
   text-align: center;
   margin-top: 3em;
 }
+
+.current_user_links {
+  border-top: 1px solid #E0E0E0;
+  padding-top: 1.5em;
+  margin-top: 1.5em;
+}
+
 
 /* Responsive */
 /* ------------------------------- */
