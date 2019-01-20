@@ -15,4 +15,8 @@ class User < ApplicationRecord
       user.password = SecureRandom.hex
     end
   end
+  
+  def sakes_with_tasting_notes
+    self.tasting_notes.map { |note| note.sake }
+  end
 end

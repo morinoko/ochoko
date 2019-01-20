@@ -1,8 +1,34 @@
 <h1><%= @sake.localized_name %></h1>
 <p><%= link_to @sake.brewery.localized_name, brewery_path(@sake.brewery) %> | <%= @sake.brewery.location.localized_name %></p>
 
-<%= link_to t('.edit'), edit_sake_path(@sake) if logged_in? %>
+<% if @current_user_tasting_note %>
+  <h2>My tasting note for this sake</h2>
+  <div>
+    <%= t('tasting_note.rating', scope: 'activerecord.attributes') %>: <%= @current_user_tasting_note.rating %>
+  </div>
+  <div>
+    <%= t('tasting_note.comment', scope: 'activerecord.attributes') %>: <%= @current_user_tasting_note.comment %>
+  </div>
+<% end %>
+
+<% if @tasting_notes %>
+  <% @tasting_notes.each do |note| %>
+    <% if current_user && note.user != current_user %>
+      <div>
+        <p><%= t('tasting_note.rating', scope: 'activerecord.attributes') %>: <%= note.rating %></p>
+        <p><%= t('tasting_note.comment', scope: 'activerecord.attributes') %>: <%= note.comment %></p>
+        <p>- <%= note.user.username %></p>
+      <div>
+    <% end %>
+  <% end %>
+<% end %>
 
 <div class="list-link">
   <%= link_to t('.back'), sakes_path %>
 </div>
+
+<% if logged_in? %>
+  <div class="current_user_links">
+    <%= link_to t('.edit'), edit_sake_path(@sake) %>
+  </div>
+<% end %>

@@ -8,6 +8,10 @@ class SakesController < ApplicationController
   end
 
   def show
+    if current_user && current_user.sakes_with_tasting_notes.include?(@sake)
+      @current_user_tasting_note = TastingNote.user_tasting_note_for(sake: @sake, user: current_user)
+      @tasting_notes = @sake.tasting_notes
+    end
   end
 
   def new
