@@ -2,24 +2,22 @@
 <p><%= link_to @sake.brewery.localized_name, brewery_path(@sake.brewery) %> | <%= @sake.brewery.location.localized_name %></p>
 
 <% if @current_user_tasting_note %>
-  <h2>My tasting note for this sake</h2>
-  <div>
-    <%= t('tasting_note.rating', scope: 'activerecord.attributes') %>: <%= @current_user_tasting_note.rating %>
-  </div>
-  <div>
-    <%= t('tasting_note.comment', scope: 'activerecord.attributes') %>: <%= @current_user_tasting_note.comment %>
-  </div>
+  <h2><%= t('.my_tasting_note') %></h2>
+  <p><%= t('tasting_note.rating', scope: 'activerecord.attributes') %>: <%= @current_user_tasting_note.rating %></p>
+  <p><%= t('tasting_note.comment', scope: 'activerecord.attributes') %>: <%= @current_user_tasting_note.comment %></p>
+  <%= link_to t('tasting_notes.edit.title'), edit_user_tasting_note_path(current_user, @current_user_tasting_note) %>
+<% else %>
+  <%= link_to t('.add_note'), new_user_tasting_note_path(current_user, sake_id: @sake.id) %>
 <% end %>
 
-<% if @tasting_notes %>
+<% unless @tasting_notes.empty? %>
+  <h2><%= @current_user_tasting_note ? t('.other_notes') : t('.all_notes') %></h2>
   <% @tasting_notes.each do |note| %>
-    <% if current_user && note.user != current_user %>
-      <div>
-        <p><%= t('tasting_note.rating', scope: 'activerecord.attributes') %>: <%= note.rating %></p>
-        <p><%= t('tasting_note.comment', scope: 'activerecord.attributes') %>: <%= note.comment %></p>
-        <p>- <%= note.user.username %></p>
-      <div>
-    <% end %>
+    <div>
+      <p><%= t('tasting_note.rating', scope: 'activerecord.attributes') %>: <%= note.rating %></p>
+      <p><%= t('tasting_note.comment', scope: 'activerecord.attributes') %>: <%= note.comment %></p>
+      <p>- <%= note.user.username %></p>
+    <div>
   <% end %>
 <% end %>
 

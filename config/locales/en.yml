@@ -58,6 +58,10 @@ en:
     index:
       title: "All sakes"
     show:
+      my_tasting_note: "My tasting notes for this sake"
+      all_notes: "Tasting notes for this sake"
+      other_notes: "Tasting notes by others"
+      add_note: "Write a tasting note for this sake"
       edit: "Edit sake"
       back: "See all sakes"
     new:

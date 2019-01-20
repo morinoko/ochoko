@@ -10,6 +10,8 @@ class SakesController < ApplicationController
   def show
     if current_user && current_user.sakes_with_tasting_notes.include?(@sake)
       @current_user_tasting_note = TastingNote.user_tasting_note_for(sake: @sake, user: current_user)
+      @tasting_notes = TastingNote.where.not("user_id = ? AND sake_id = ?", current_user.id, @sake.id)
+    else
       @tasting_notes = @sake.tasting_notes
     end
   end
