@@ -1,3 +1,68 @@
-#signup {
+#profile-sake-list {
+  width: 720px;
+}
+
+.sake-card {
+  box-shadow: 0 0 7px 0 rgba(0,0,0,.06);
+  background: #fff;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.sake-card .title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.sake-card .localized-name {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.sake-card .japanese-name {
+  color: #757575;
+  font-size: .9em;
+}
+
+.sake-card .details {
+  padding-bottom: 1em;
+}
+
+.sake-card .grade {
   
+}
+
+.sake-card .tasting-note {
+  display: flex;
+  border-top: 1px #EEEEEE solid;
+  padding-top: 0.5em;
+}
+
+.sake-card .tasting-note .rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 70px;
+  padding: 8px;
+  margin-right: 8px;
+  background-color: #E1F5FE;
+  border-radius: 5px;
+}
+
+.sake-card .tasting-note .rating-label {
+  font-size: 0.8em;
+}
+
+.sake-card .tasting-note .rating-value {
+  font-size: 2em;
+}
+
+/* Responsive */
+/* ------------------------------- */
+@media screen and (max-width: 750px) {
+  #profile-sake-list {
+    width: 100%;
+  }
 }

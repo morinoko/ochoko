@@ -36,8 +36,6 @@ class Sake < ApplicationRecord
     localized_name = I18n.locale == :ja ? japanese_name : romanized_name
     
     localized_name += " #{localized_sake_type}" if localized_sake_type
-    
-    localized_name += " (#{localized_grade})" if grade
   end
   
   def localized_grade
@@ -54,5 +52,9 @@ class Sake < ApplicationRecord
     else
       sake_type_romanized
     end
+  end
+  
+  def localized_location
+    self.brewery.location.localized_name
   end
 end
