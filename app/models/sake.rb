@@ -1,6 +1,6 @@
 class Sake < ApplicationRecord
   belongs_to :brewery
-  has_many :notes
+  has_many :tasting_notes
   
   validates :japanese_name, presence: true
   validates :romanized_name, presence: true
