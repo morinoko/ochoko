@@ -25,6 +25,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 #gem 'rails-i18n'
 gem 'jp_prefecture'
+gem "font-awesome-rails"
 
 gem 'omniauth'
 gem 'omniauth-facebook'
