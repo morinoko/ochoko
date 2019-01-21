@@ -1,27 +1,28 @@
 class Sake < ApplicationRecord
   belongs_to :brewery
   has_many :tasting_notes
+  scope :rated, -> { joins(:tasting_notes) }
   
   validates :japanese_name, presence: true
   validates :romanized_name, presence: true
 
   GRADES = {
-    :honjozo => { japanese: "本醸造",
-                  english: "Honjōzō" },
+    :honjozo =>           { japanese: "本醸造",
+                            english: "Honjōzō" },
     :tokubetsu_honjozo => { japanese: "特別本醸造",
                             english: "Tokubetsu Honjōzō" },
-    :ginjo => { japanese: "吟醸",
-                english: "Ginjō" },
-    :daiginjo => { japanese: "大吟醸",
-                    english: "Daiginjō" },
-    :junmai => { japanese: "純米",
-                  english: "Junmai" },
-    :tokubetsu_junmai => { japanese: "特別純米",
-                           english: "Tokubetsu Junmai" },
-    :junmai_ginjo => { japanese: "純米吟醸",
-                       english: "Junmai Ginjō" },
-    :junmai_daiginjo => { japanese: "純米大吟醸",
-                          english: "Junmai Daiginjō" }
+    :ginjo =>             { japanese: "吟醸",
+                            english: "Ginjō" },
+    :daiginjo =>          { japanese: "大吟醸",
+                            english: "Daiginjō" },
+    :junmai =>            { japanese: "純米",
+                            english: "Junmai" },
+    :tokubetsu_junmai =>  { japanese: "特別純米",
+                            english: "Tokubetsu Junmai" },
+    :junmai_ginjo =>      { japanese: "純米吟醸",
+                            english: "Junmai Ginjō" },
+    :junmai_daiginjo =>   { japanese: "純米大吟醸",
+                            english: "Junmai Daiginjō" }
   }
 
   def self.grades_english
