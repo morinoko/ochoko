@@ -2,6 +2,18 @@
   width: 720px;
 }
 
+#profile-sake-list .list-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5em 0 1em;
+}
+
+#profile-sake-list .list-header h2 {
+  margin-top: 0;
+}
+
 .sake-card {
   box-shadow: 0 0 7px 0 rgba(0,0,0,.06);
   background: #fff;

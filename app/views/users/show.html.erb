@@ -1,12 +1,16 @@
 <h1><%= t('.title') %></h1>
-<h2><%= t('.sake_list_title') %></h2>
 
 <div id="profile-sake-list">
+
+<div class="list-header">
+  <h2><%= t('.sake_list_title') %></h2>
+  
+  <% if current_user == @user %>
+    <%= link_to t('.add_note'), new_user_tasting_note_path(@user), class: "button btn-regular add_note" %>
+<% end %>
+</div>
+
 <% @tasting_notes.each do |note| %>
   <%= render partial: 'user_sake_card', locals: { user: @user, note: note } %>
 <% end %>
 </div>
-
-<% if current_user == @user %>
-  <%= link_to t('.add_note'), new_user_tasting_note_path(@user), class: "button btn-regular" %>
-<% end %>
