@@ -2,3 +2,10 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+.sake-details {
+  padding-bottom: 1em;
+}
+
+.sake-details .grade {
+  margin-right: 1em;
+}

@@ -6,11 +6,8 @@
       <span class="japanese-name"><%= note.sake.japanese_name + note.sake.sake_type_japanese %></span>
     <% end %>
   </div>
-
-  <div class="details">
-    <span class="grade"><i class="fas fa-wine-bottle"></i> <%= note.sake.localized_grade %></span>
-    <span class="location"><i class="fas fa-globe-asia"></i> <%= note.sake.localized_location %></span>
-  </div>
+  
+  <%= render partial: "sakes/details", locals: { tasting_note: note } %>
 
   <div class="tasting-note">
     <div class="rating">

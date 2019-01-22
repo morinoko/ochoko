@@ -38,14 +38,6 @@
   font-size: .9em;
 }
 
-.sake-card .details {
-  padding-bottom: 1em;
-}
-
-.sake-card .grade {
-  margin-right: 1em;
-}
-
 .sake-card .tasting-note {
   display: flex;
   border-top: 1px #EEEEEE solid;
