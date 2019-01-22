@@ -1,4 +1,7 @@
 <div class="sake-details">
   <span class="grade"><i class="fas fa-wine-bottle"></i> <%= tasting_note.sake.localized_grade %></span>
   <span class="location"><i class="fas fa-globe-asia"></i> <%= tasting_note.sake.localized_location %></span>
+  <% if I18n.locale == :en %>
+      <span class="japanese-name"><i class="fas fa-language"></i> <%= tasting_note.sake.japanese_name + tasting_note.sake.sake_type_japanese %></span>
+  <% end %>
 </div>

@@ -22,20 +22,8 @@
 }
 
 .sake-card .title {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.sake-card .localized-name {
   font-size: 1.5em;
   margin-bottom: 0.5em;
-}
-
-.sake-card .japanese-name {
-  color: #757575;
-  font-size: .9em;
 }
 
 .sake-card .tasting-note {

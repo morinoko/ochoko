@@ -6,6 +6,10 @@
   padding-bottom: 1em;
 }
 
-.sake-details .grade {
+.sake-details span {
   margin-right: 1em;
+}
+
+.sake-details span:last-child {
+  margin-right: 0;
 }
