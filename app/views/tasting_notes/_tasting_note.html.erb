@@ -1,0 +1,15 @@
+<div id="tasting-note">
+  <div class="content">
+    <div class="rating">
+      <span class="rating-label"><%= t('tasting_note.rating', scope: 'activerecord.attributes') %></span>
+      <span class="rating-value"><%= tasting_note.rating %></span>
+    </div>
+    <div class="comment">
+      <%= tasting_note.comment %>
+    </div>
+  </div>
+  <div class="meta">
+    <span><%= t('.created_at') %> <%= tasting_note.created_at.strftime( t('date_format')) %></span>
+    <span><%= t('.updated_at') %>  <%= tasting_note.updated_at.strftime( t('date_format')) %></span>
+  </div>
+</div>

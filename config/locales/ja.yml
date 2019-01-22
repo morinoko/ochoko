@@ -1,5 +1,6 @@
 ja:
   app_name: "おちょこ"
+  date_format: "%Y年%%_m月%-d日"
   signup: "登録する"
   login: "ログインする"
   logout: "ログアウト"
@@ -23,7 +24,7 @@ ja:
       title: "ダッシュボード"
       sake_list_title: "私の日本酒"
       add_note: "新しいティースティングノートを書く"
-    user_sake_card:
+    duser_sake_card:
       note_link: "ノートを見る"
   sakes:
     index:
@@ -62,9 +63,11 @@ ja:
     not_found: "ティースティングノートは見つかりませんでした。"
     show:
       edit: "ティースティングノートを編集する"
-      go_to_sake: "この日本酒のページを見る"
       delete: "削除する"
       delete_confirmation: "本当に削除しますか？"
+    tasting_note:
+      created_at: "最初に飲んだ日"
+      updated_at: "更新日"
     new:
       title: "新しいティースティングノートを書く"
     edit:

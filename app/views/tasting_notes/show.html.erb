@@ -1,11 +1,10 @@
-<h1>Tasting Note for <%= @tasting_note.sake.localized_name %></h1>
+<h1><%= t('tasting_note', scope: 'activerecord.models') %></h1>
 
-<p>My rating: <%= @tasting_note.rating %></p>
-<p><%= @tasting_note.comment %></p>
+<h2><%= link_to @tasting_note.sake.localized_name, sake_path(@tasting_note.sake) %></h2>
 
-<div>
-  <%= link_to t('.go_to_sake'), sake_path(@tasting_note.sake) %>
-</div>
+<%= render partial: "sakes/details", locals: { tasting_note: @tasting_note } %>
+
+<%= render partial: "tasting_note", locals: { tasting_note: @tasting_note } %>
 
 <% if logged_in? && current_user == @tasting_note.user %>
   <div class="current_user_links">

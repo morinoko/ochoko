@@ -31,6 +31,7 @@
 
 en:
   app_name: "Ochoko"
+  date_format: "%b %-d, %Y"
   signup: "Sign up"
   login: "Login"
   logout: "Logout"
@@ -93,9 +94,11 @@ en:
     not_found: "Tasting note not found."
     show:
       edit: "Edit tasting note"
-      go_to_sake: "Go to this sake's page"
       delete: "Delete note"
       delete_confirmation: "Are you sure?"
+    tasting_note:
+      created_at: "First tasted: "
+      updated_at: "Updated: "
     new:
       title: "Add a new tasting note"
     edit:
