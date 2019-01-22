@@ -3,30 +3,7 @@
 
 <div id="profile-sake-list">
 <% @tasting_notes.each do |note| %>
-  <div class="card sake-card">
-    <div class="title">
-      <%= link_to note.sake.localized_name, user_tasting_note_path(@user, note), class: "localized-name" %>
-      
-      <% if I18n.locale == :en %>
-        <span class="japanese-name"><%= note.sake.japanese_name + note.sake.sake_type_japanese %></span>
-      <% end %>
-    </div>
-    
-    <div class="details">
-      <span class="grade"><i class="fas fa-wine-bottle"></i> <%= note.sake.localized_grade %></span>
-      <span class="location"><i class="fas fa-globe-asia"></i> <%= note.sake.localized_location %></span>
-    </div>
-    
-    <div class="tasting-note">
-      <div class="rating">
-        <span class="rating-label"><%= t('tasting_note.rating', scope: 'activerecord.attributes') %></span>
-        <span class="rating-value"><%= note.rating %></span>
-      </div>
-      <div class="comment">
-        <%= note.comment %>
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'user_sake_card', locals: { user: @user, note: note } %>
 <% end %>
 </div>
 
