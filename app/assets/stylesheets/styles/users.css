@@ -71,6 +71,17 @@
   font-size: 2em;
 }
 
+.sake-card .tasting-note .comment {
+  flex: 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sake-card .tasting-note .comment a {
+  align-self: flex-end;
+}
+
 /* Responsive */
 /* ------------------------------- */
 @media screen and (max-width: 750px) {

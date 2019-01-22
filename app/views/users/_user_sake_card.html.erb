@@ -1,6 +1,6 @@
 <div class="card sake-card">
   <div class="title">
-    <%= link_to note.sake.localized_name, user_tasting_note_path(user, note), class: "localized-name" %>
+    <%= link_to note.sake.localized_name, sake_path(note.sake), class: "localized-name" %>
 
     <% if I18n.locale == :en %>
       <span class="japanese-name"><%= note.sake.japanese_name + note.sake.sake_type_japanese %></span>
@@ -19,6 +19,7 @@
     </div>
     <div class="comment">
       <%= note.comment %>
+      <%= link_to t('.note_link'), user_tasting_note_path(user, note) %>
     </div>
   </div>
 </div>

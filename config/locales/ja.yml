@@ -23,6 +23,8 @@ ja:
       title: "ダッシュボード"
       sake_list_title: "私の日本酒"
       add_note: "新しいティースティングノートを書く"
+    user_sake_card:
+      note_link: "ノートを見る"
   sakes:
     index:
       title: "日本酒の一覧"

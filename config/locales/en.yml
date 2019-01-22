@@ -54,6 +54,8 @@ en:
       title: "My Dashboard"
       sake_list_title: "My Sakes"
       add_note: "Add a new tasting note"
+    user_sake_card:
+      note_link: "Go to note"
   sakes:
     index:
       title: "All sakes"
