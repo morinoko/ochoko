@@ -10,7 +10,7 @@
 <% end %>
 </div>
 
-<% @tasting_notes.each do |note| %>
-  <%= render partial: 'user_sake_card', locals: { user: @user, note: note } %>
+<% @tasting_notes.each do |tasting_note| %>
+  <%= render partial: 'user_sake_card', locals: { user: @user, tasting_note: tasting_note } %>
 <% end %>
 </div>

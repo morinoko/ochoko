@@ -1,18 +1,18 @@
 <div class="card sake-card">
   <div class="title">
-    <%= link_to note.sake.localized_name, sake_path(note.sake), class: "localized-name" %>
+    <%= link_to tasting_note.sake.localized_name, sake_path(tasting_note.sake), class: "localized-name" %>
   </div>
   
-  <%= render partial: "sakes/details", locals: { tasting_note: note } %>
+  <%= render partial: "sakes/details", locals: { sake: tasting_note.sake } %>
 
   <div class="tasting-note">
     <div class="rating">
       <span class="rating-label"><%= t('tasting_note.rating', scope: 'activerecord.attributes') %></span>
-      <span class="rating-value"><%= note.rating %></span>
+      <span class="rating-value"><%= tasting_note.rating %></span>
     </div>
     <div class="comment">
-      <%= note.comment %>
-      <%= link_to t('.note_link'), user_tasting_note_path(user, note) %>
+      <%= tasting_note.comment %>
+      <%= link_to t('.note_link'), user_tasting_note_path(user, tasting_note) %>
     </div>
   </div>
 </div>
