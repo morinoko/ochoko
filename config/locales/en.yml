@@ -61,11 +61,12 @@ en:
     index:
       title: "All sakes"
     show:
+      brewed_by_html: "Brewed by %{brewery_link}"
       my_tasting_note: "My tasting notes for this sake"
       all_notes: "Tasting notes for this sake"
       other_notes: "Tasting notes by others"
       add_note: "Write a tasting note for this sake"
-      edit: "Edit sake"
+      edit_html: '<i class="fas fa-edit"></i> Edit sake'
       back: "See all sakes"
     new:
       title: "Add a new sake"
@@ -93,8 +94,8 @@ en:
   tasting_notes:
     not_found: "Tasting note not found."
     show:
-      edit: "Edit tasting note"
-      delete: "Delete note"
+      edit_html: '<i class="fas fa-edit"></i> Edit tasting note'
+      delete_html: '<i class="fas fa-trash-alt"> Delete note'
       delete_confirmation: "Are you sure?"
     tasting_note:
       created_at: "First tasted: "

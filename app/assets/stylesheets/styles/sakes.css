@@ -13,3 +13,11 @@
 .sake-details span:last-child {
   margin-right: 0;
 }
+
+#current-user-tasting-note {
+  margin-top: 4em;
+}
+
+.button.add-note {
+  margin-top: 2em;
+}

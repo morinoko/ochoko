@@ -1,24 +1,27 @@
 <h1><%= @sake.localized_name %></h1>
-<p><%= link_to @sake.brewery.localized_name, brewery_path(@sake.brewery) %> | <%= @sake.brewery.location.localized_name %></p>
+
+<%= render partial: "sakes/details", locals: { sake: @sake } %>
+
+<div class="brewery"><%= t('.brewed_by_html', brewery_link: (link_to @sake.brewery.localized_name, brewery_path(@sake.brewery)))%></div>
 
 <% if @current_user_tasting_note %>
-  <h2><%= t('.my_tasting_note') %></h2>
-  <p><%= t('tasting_note.rating', scope: 'activerecord.attributes') %>: <%= @current_user_tasting_note.rating %></p>
-  <p><%= t('tasting_note.comment', scope: 'activerecord.attributes') %>: <%= @current_user_tasting_note.comment %></p>
-  <%= link_to t('tasting_notes.edit.title'), edit_user_tasting_note_path(current_user, @current_user_tasting_note) %>
-<% else %>
-  <%= link_to t('.add_note'), new_user_tasting_note_path(current_user, sake_id: @sake.id) %>
+  <section id="current-user-tasting-note">
+    <h2><%= t('.my_tasting_note') %></h2>
+    
+    <%= render partial: 'tasting_notes/tasting_note', locals: { tasting_note: @current_user_tasting_note } %>
+  </section>
+<% elsif logged_in? %>
+  <%= link_to t('.add_note'), new_user_tasting_note_path(current_user, sake_id: @sake.id), class: "button btn-regular add-note" %>
 <% end %>
 
 <% unless @tasting_notes.empty? %>
-  <h2><%= @current_user_tasting_note ? t('.other_notes') : t('.all_notes') %></h2>
-  <% @tasting_notes.each do |note| %>
-    <div>
-      <p><%= t('tasting_note.rating', scope: 'activerecord.attributes') %>: <%= note.rating %></p>
-      <p><%= t('tasting_note.comment', scope: 'activerecord.attributes') %>: <%= note.comment %></p>
-      <p>- <%= note.user.username %></p>
-    <div>
-  <% end %>
+  <section id="current-user-tasting-note">
+    <h2><%= @current_user_tasting_note ? t('.other_notes') : t('.all_notes') %></h2>
+    
+    <% @tasting_notes.each do |tasting_note| %>
+      <%= render partial: 'tasting_notes/tasting_note', locals: { tasting_note: tasting_note } %>
+    <% end %>
+  </section>
 <% end %>
 
 <div class="list-link">
@@ -27,6 +30,6 @@
 
 <% if logged_in? %>
   <div class="current_user_links">
-    <%= link_to t('.edit'), edit_sake_path(@sake) %>
+    <%= link_to t('.edit_html'), edit_sake_path(@sake) %>
   </div>
 <% end %>
