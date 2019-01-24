@@ -2,7 +2,7 @@
 
 <h2><%= link_to @tasting_note.sake.localized_name, sake_path(@tasting_note.sake) %></h2>
 
-<%= render partial: "sakes/details", locals: { tasting_note: @tasting_note } %>
+<%= render partial: "sakes/details", locals: { sake: @tasting_note.sake } %>
 
 <%= render partial: "tasting_note", locals: { tasting_note: @tasting_note } %>
 
