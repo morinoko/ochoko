@@ -9,6 +9,10 @@
     </div>
   </div>
   <div class="meta">
-    <span class="created"><i class="fas fa-calendar-day"></i> <%= t('.created_at') %> <%= tasting_note.created_at.strftime( t('date_format')) %></span>
+    <% if tasting_note.user == current_user %>
+      <span class="created"><i class="fas fa-calendar-day"></i> <%= t('.created_at') %> <%= tasting_note.created_at.strftime( t('date_format')) %></span>
+    <% else %>
+      <span class="user"><i class="fas fa-user-circle"></i> <%= tasting_note.user.username %></span>
+    <% end %>
   </div>
 </div>
