@@ -8,10 +8,10 @@
 
 <% if logged_in? && current_user == @tasting_note.user %>
   <div class="current_user_links">
-    <%= link_to t('.edit'), edit_user_tasting_note_path(@tasting_note.user, @tasting_note) %>
+    <i class="fas fa-edit"></i> <%= link_to t('.edit'), edit_user_tasting_note_path(@tasting_note.user, @tasting_note) %>
     
     <div id="delete">
-      <%= link_to t('.delete'), user_tasting_note_path(@tasting_note.user, @tasting_note), method: :delete, data: { confirm: t('.delete_confirmation') } %>
+      <i class="fas fa-trash-alt"></i> <%= link_to t('.delete'), user_tasting_note_path(@tasting_note.user, @tasting_note), method: :delete, data: { confirm: t('.delete_confirmation') } %>
     </div>
   </div>
 <% end %>

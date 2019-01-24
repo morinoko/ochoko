@@ -34,7 +34,16 @@
   justify-content: space-between;
 }
 
+#tasting-note .meta {
+  color: #757575;
+  text-align: right;
+  border-top: 1px solid #E0E0E0;
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
 #delete {
+  color: #b71c1c;
   text-align: right;
   font-size: 0.85em;
 }
