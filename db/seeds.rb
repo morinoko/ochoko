@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# JpPrefecture::Prefecture.all.each do |pref|
-#   Location.where(prefecture_code: pref.code).first_or_create
-# end
+JpPrefecture::Prefecture.all.each do |pref|
+  Location.where(prefecture_code: pref.code).first_or_create
+end
 
 breweries = [
   { japanese_name: "井賀屋酒造店", hiragana_name: "いがやしゅぞうてん", romanized_name: "Igaya Shuzōten", location_id: 20}, # 岩清水
