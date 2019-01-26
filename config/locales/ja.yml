@@ -52,6 +52,10 @@ ja:
     show:
       back: "酒造の一覧を見る"
       sakes: "この酒造のお酒"
+      no_sakes: "この酒造はまだ日本酒がありません。"
+      add_sake_now: "追加しますか？"
+      edit_html: '<i class="fas fa-edit"></i> 酒造を編集する'
+      add_sake_html: '<i class="fas fa-plus"></i> 新しい日本酒を追加する'
     new:
       title: "新しい酒造を登録する"
     edit:

@@ -13,9 +13,13 @@ class Brewery < ApplicationRecord
   
   def localized_name
     if I18n.locale == :ja
-      "#{japanese_name} (#{hiragana_name})"
+      "#{japanese_name}"
     else
-      "#{romanized_name} (#{japanese_name})"
+      "#{romanized_name}"
     end
+  end
+  
+  def localized_location
+    self.location.localized_name
   end
 end

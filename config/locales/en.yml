@@ -83,6 +83,10 @@ en:
     show:
       back: "See all breweries"
       sakes: "Sakes made by this brewery"
+      no_sakes: "There are no sakes for this brewery yet!"
+      add_sake_now: "Add one now"
+      edit_html: '<i class="fas fa-edit"></i> Edit brewery'
+      add_sake_html: '<i class="fas fa-plus"></i> Add a new sake'
     new:
       title: "Add a new brewery"
     edit:

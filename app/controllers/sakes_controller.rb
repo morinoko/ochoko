@@ -18,6 +18,10 @@ class SakesController < ApplicationController
 
   def new
     @sake = Sake.new
+    
+    if params[:brewery_id]
+      @sake.brewery_id = params[:brewery_id]
+    end
   end
 
   def create

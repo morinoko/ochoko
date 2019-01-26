@@ -176,7 +176,17 @@ footer #login_status {
 }
 
 .current_user_links {
-  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.current_user_links a {
+  padding: 0.5em;
+}
+
+.current_user_links a:last-child {
+  padding-right: 0;
 }
 
 

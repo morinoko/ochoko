@@ -1,16 +1,23 @@
 <h1><%= @brewery.localized_name %></h1>
-<p><%= @brewery.location.localized_name %></p>
+<%= render partial: 'details', locals: { brewery: @brewery } %>
 
-<%= link_to t('.edit'), edit_brewery_path(@brewery) if logged_in? %>
-
-<h2><%= t('.sakes') %></h2>
-
-<ul>
-<% @brewery.sakes.each do |sake| %>
-  <li><%= link_to sake.localized_name, sake_path(sake) %></li>
+<% if @brewery.sakes.count > 0 %>
+  <h2><%= t('.sakes') %></h2>
+  
+  <% @brewery.sakes.each do |sake| %>
+    <%= render partial: 'sakes/sake', locals: { sake: sake } %>
+  <% end %>
+<% else %>
+  <p><%= t('.no_sakes') %> <%= link_to t('.add_sake_now'), new_sake_path(params: { brewery_id: @brewery.id }) %></p>
 <% end %>
-</ul>
 
 <div class="list-link">
   <%= link_to t('.back'), breweries_path %>
 </div>
+
+<% if logged_in? %>
+  <div class="current_user_links">
+    <%= link_to t('.edit_html'), edit_brewery_path(@brewery) %>
+    <%= link_to t('.add_sake_html'), new_sake_path(brewery_id: @brewery.id)%>
+  </div>
+<% end %>
