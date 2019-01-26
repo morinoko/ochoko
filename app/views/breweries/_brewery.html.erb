@@ -1,0 +1,7 @@
+<div class="card brewery-card">
+  <div class="title">
+    <%= link_to brewery.localized_name, brewery_path(brewery), class: "localized-name" %>
+  </div>
+  
+  <%= render partial: "breweries/details", locals: { brewery: brewery } %>
+</div>

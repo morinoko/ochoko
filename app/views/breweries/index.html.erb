@@ -8,7 +8,7 @@
     <h2><%= location.localized_name %></h2>
     
     <% location.breweries.each do |brewery| %>
-      <h2><%= link_to brewery.localized_name, brewery %></h2>
+      <%= render partial: 'brewery', locals: { brewery: brewery } %>
     <% end %>
   <% end %>
 <% end %>
