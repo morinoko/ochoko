@@ -12,4 +12,16 @@
  *
  *= require_self
  *= require main
+ *= require normalize
+ *= require ja
+ *= require en
+ *= require global
+ *= require forms
+ *= require sessions
+ *= require users
+ *= require cards
+ *= require welcome
+ *= require sakes
+ *= require breweries
+ *= require tasting_notes
  */
