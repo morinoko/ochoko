@@ -70,7 +70,7 @@ ja:
     not_found: "ティースティングノートは見つかりませんでした。"
     show:
       edit_html: '<i class="fas fa-edit"></i> ノートを編集する'
-      delete_html: '<i class="fas fa-trash-alt"> 削除する'
+      delete_html: '<i class="fas fa-trash-alt"></i> 削除する'
       delete_confirmation: "本当に削除しますか？"
     tasting_note:
       created_at: "最初に飲んだ日"

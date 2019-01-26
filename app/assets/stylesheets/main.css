@@ -1,4 +1,6 @@
 @import "normalize.css";
+@import "en.css";
+@import "ja.css";
 @import "welcome.css";
 @import "global.css";
 @import "users.css";

@@ -101,7 +101,7 @@ en:
     not_found: "Tasting note not found."
     show:
       edit_html: '<i class="fas fa-edit"></i> Edit tasting note'
-      delete_html: '<i class="fas fa-trash-alt"> Delete note'
+      delete_html: '<i class="fas fa-trash-alt"></i> Delete note'
       delete_confirmation: "Are you sure?"
     tasting_note:
       created_at: "First tasted: "

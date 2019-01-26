@@ -199,7 +199,7 @@ footer #login_status {
   margin-top: 2em;
 }
 
-.current_user_links a {
+.current_user_links > * {
   padding: 0.5em;
 }
 
