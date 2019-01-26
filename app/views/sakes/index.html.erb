@@ -4,5 +4,5 @@
 </div>
 
 <% @sakes.each do |sake| %>
-  <h2><%= link_to sake.localized_name, sake %></h2>
+  <%= render partial: 'sake', locals: { sake: sake } %>
 <% end %>
