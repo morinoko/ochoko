@@ -60,6 +60,7 @@ en:
   sakes:
     index:
       title: "All sakes"
+      add_html: '<i class="fas fa-plus"></i> Add sake'
     show:
       brewed_by_html: "Brewed by %{brewery_link}"
       my_tasting_note: "My tasting notes for this sake"
@@ -80,6 +81,7 @@ en:
   breweries:
     index:
       title: "All Breweries"
+      add_html: '<i class="fas fa-plus"></i> Add brewery'
     show:
       back: "See all breweries"
       sakes: "Sakes made by this brewery"

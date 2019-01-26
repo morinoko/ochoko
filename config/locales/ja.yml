@@ -29,6 +29,7 @@ ja:
   sakes:
     index:
       title: "日本酒の一覧"
+      add_html: '<i class="fas fa-plus"></i> 日本酒を追加する'
     new:
       title: "新しい日本酒の登録"
     show:
@@ -49,6 +50,7 @@ ja:
   breweries:
     index:
       title: "酒造の一覧"
+      add_html: '<i class="fas fa-plus"></i> 酒造を追加する'
     show:
       back: "酒造の一覧を見る"
       sakes: "この酒造のお酒"

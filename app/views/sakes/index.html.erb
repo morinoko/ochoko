@@ -1,4 +1,8 @@
-<h1><%= t('.title') %></h1>
+<div class="title-header">
+  <h1><%= t('.title') %></h1>
+  <%= link_to t('.add_html'), new_sake_path, class: "button btn-add" %>
+</div>
+
 <% @sakes.each do |sake| %>
   <h2><%= link_to sake.localized_name, sake %></h2>
 <% end %>
