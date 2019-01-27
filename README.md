@@ -12,10 +12,11 @@ Try out the app here: https://ochoko.herokuapp.com/
 - App can be used in either Japanese or English
 - Sign up (Facebook or email/password) and add tasting notes for the sakes you've drank
 
-## Features to add
+## Features to add in the future
 
 - Search for sakes and breweries
 - Auto-complete form for selecting sakes or breweries when adding new ones
+- Ability to upload images
 - User following feature (maybe?)
 - Tests!
 
