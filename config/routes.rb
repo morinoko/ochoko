@@ -7,7 +7,12 @@ Rails.application.routes.draw do
     end
     
     resources :breweries
-    resources :sakes
+    
+    resources :sakes do
+      collection do
+        get 'rated'
+      end
+    end 
       
     # Signup/Login
     get '/signup' => "users#new"

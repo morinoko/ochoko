@@ -1,0 +1,7 @@
+<div class="title-header">
+  <h1><%= t('.title') %></h1>
+</div>
+
+<% @sakes.each do |sake| %>
+  <%= render partial: 'user_tasting_note', locals: { sake: sake } %>
+<% end %>

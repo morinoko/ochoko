@@ -1,16 +1,20 @@
 class SakesController < ApplicationController
   before_action :set_sake, only: [:show, :edit, :update]
   before_action :set_breweries, only: [:new, :edit, :update]
-  before_action :require_login, except: [:index, :show]
+  before_action :require_login, except: [:index, :show, :rated]
 
   def index
     @sakes = Sake.all
+  end
+  
+  def rated
+    @sakes = Sake.rated
   end
 
   def show
     if current_user && current_user.sakes_with_tasting_notes.include?(@sake)
       @current_user_tasting_note = TastingNote.user_tasting_note_for(sake: @sake, user: current_user)
-      @tasting_notes = TastingNote.where.not("user_id = ?", current_user.id)
+      @tasting_notes = @sake.tasting_notes.where.not("user_id = ?", current_user.id)
     else
       @tasting_notes = @sake.tasting_notes
     end
