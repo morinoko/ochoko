@@ -30,6 +30,9 @@ ja:
     index:
       title: "日本酒の一覧"
       add_html: '<i class="fas fa-plus"></i> 日本酒を追加する'
+      see_rated: "評価された日本酒のみ"
+    rated:
+      title: "評価された日本酒"
     new:
       title: "新しい日本酒の登録"
     show:

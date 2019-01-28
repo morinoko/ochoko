@@ -3,6 +3,8 @@
   <%= link_to t('.add_html'), new_sake_path, class: "button btn-add" %>
 </div>
 
+<%= link_to t('.see_rated'), rated_sakes_path, class: "category-link" %>
+
 <% @sakes.each do |sake| %>
   <%= render partial: 'sake', locals: { sake: sake } %>
 <% end %>

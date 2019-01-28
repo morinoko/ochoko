@@ -3,5 +3,5 @@
 </div>
 
 <% @sakes.each do |sake| %>
-  <%= render partial: 'user_tasting_note', locals: { sake: sake } %>
+  <%= render partial: 'sake_with_tasting_notes', locals: { sake: sake } %>
 <% end %>

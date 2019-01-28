@@ -61,6 +61,9 @@ en:
     index:
       title: "All sakes"
       add_html: '<i class="fas fa-plus"></i> Add sake'
+      see_rated: "Rated sakes only"
+    rated:
+      title: "All rated sakes"
     show:
       brewed_by_html: "Brewed by %{brewery_link}"
       my_tasting_note: "My tasting notes for this sake"

@@ -1,0 +1,20 @@
+<div class="card sake-card">
+  <div class="title">
+    <%= link_to sake.localized_name, sake_path(sake), class: "localized-name" %>
+  </div>
+  
+  <%= render partial: "sakes/details", locals: { sake: sake } %>
+  
+  <% sake.tasting_notes.each do |tasting_note| %>
+    <div class="tasting-note">
+      <div class="rating">
+        <span class="rating-label"><%= t('tasting_note.rating', scope: 'activerecord.attributes') %></span>
+        <span class="rating-value"><%= tasting_note.rating %></span>
+      </div>
+      <div class="comment">
+        <span class="date"><i class="fas fa-calendar-day"></i> <%= tasting_note.created_at.strftime( t('date_format')) %></span>
+        <p><%= tasting_note.comment %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
