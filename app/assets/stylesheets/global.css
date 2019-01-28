@@ -1,3 +1,15 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
 /* Layout */
 /* ------------------------------- */
 .container {
@@ -103,6 +115,33 @@ h6 {
 }
 
 
+/* Links */
+/* ------------------------------- */
+.list-link {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.current_user_links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.current_user_links > * {
+  padding: 0.5em;
+}
+
+.current_user_links a:last-child {
+  padding-right: 0;
+}
+
+.category-link {
+  padding-bottom: 1em;
+  display: inline-block;
+}
+
+
 /* Header */
 /* ------------------------------- */
 header {
@@ -186,25 +225,6 @@ footer #login_status {
 
 .title-header > * {
   margin-top: 16px;
-}
-
-.list-link {
-  text-align: center;
-  margin-top: 3em;
-}
-
-.current_user_links {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 2em;
-}
-
-.current_user_links > * {
-  padding: 0.5em;
-}
-
-.current_user_links a:last-child {
-  padding-right: 0;
 }
 
 
