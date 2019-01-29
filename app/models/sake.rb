@@ -5,6 +5,8 @@ class Sake < ApplicationRecord
   
   validates :japanese_name, presence: true
   validates :romanized_name, presence: true
+  validates :grade, presence: true
+  validates :brewery_id, presence: true
 
   GRADES = {
     :honjozo =>           { japanese: "本醸造",

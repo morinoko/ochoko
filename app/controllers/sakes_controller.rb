@@ -34,6 +34,7 @@ class SakesController < ApplicationController
     if @sake.save
       redirect_to @sake
     else
+      set_breweries
       render :new
     end
   end

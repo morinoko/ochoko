@@ -37,12 +37,20 @@
   <div class="form-group">
     <%= f.label :grade %>
     <%= f.select(:grade, sake_grades_for_select, include_blank: true) %>
+    
+    <% if @sake.errors[:grade].any? %>
+      <%= error_feedback(object: @sake, attribute: :grade) %>
+    <% end %>
   </div>
   
   <h3><%= t('activerecord.models.brewery') %></h3>
   <div class="form-group">
     <%= f.label :brewery_id, t('.choose_brewery') %>
     <%= f.collection_select(:brewery_id, @breweries, :id, :localized_name, include_blank: true) %>
+    
+    <% if @sake.errors[:brewery_id].any? %>
+      <%= error_feedback(object: @sake, attribute: :brewery_id) %>
+    <% end %>
   </div>
   
   <%= f.submit t('.submit'), class: "button btn-regular" %>
