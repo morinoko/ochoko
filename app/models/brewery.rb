@@ -2,6 +2,7 @@ class Brewery < ApplicationRecord
   belongs_to :location
   has_many :sakes
   
+  validates :grade, presence: true
   validates :japanese_name, presence: true
   validates :japanese_name, uniqueness: { scope: :location_id,
                                           message: I18n.t(:taken, scope: 'activerecord.errors.models.brewery') }
