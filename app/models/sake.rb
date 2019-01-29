@@ -49,9 +49,9 @@ class Sake < ApplicationRecord
   
   def localized_sake_type
     if I18n.locale == :ja
-      sake_type_japanese
+      sake_type_japanese if sake_type_japanese
     else
-      sake_type_romanized
+      sake_type_romanized if sake_type_romanized
     end
   end
   

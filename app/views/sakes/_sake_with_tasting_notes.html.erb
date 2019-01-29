@@ -13,7 +13,7 @@
       </div>
       <div class="comment">
         <span class="date"><i class="fas fa-calendar-day"></i> <%= tasting_note.created_at.strftime( t('date_format')) %></span>
-        <p><%= tasting_note.comment %></p>
+        <p><%= tasting_note.comment if tasting_note.comment %></p>
       </div>
     </div>
   <% end %>

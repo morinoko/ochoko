@@ -5,7 +5,7 @@
       <span class="rating-value"><%= tasting_note.rating %></span>
     </div>
     <div class="comment">
-      <%= tasting_note.comment %>
+      <%= tasting_note.comment if tasting_note.comment %>
     </div>
   </div>
   <div class="meta">

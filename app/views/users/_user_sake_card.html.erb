@@ -11,7 +11,7 @@
       <span class="rating-value"><%= tasting_note.rating %></span>
     </div>
     <div class="comment">
-      <%= tasting_note.comment %>
+      <%= tasting_note.comment if tasting_note.comment %>
       <%= link_to t('.note_link'), user_tasting_note_path(user, tasting_note) %>
     </div>
   </div>
