@@ -13,7 +13,6 @@
  *= require_self
  *= require normalize
  *= require global
- *= require_directory ./locales
  *= require_directory ./resources
  *= require forms
  *= require sessions

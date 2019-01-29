@@ -1,0 +1,6 @@
+/*
+ * Manifest file for en styles, to be compiled into front.scss
+ *
+ *= require_self
+ *= require locales/en
+ */
