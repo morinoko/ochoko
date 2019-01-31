@@ -9,9 +9,7 @@ Rails.application.routes.draw do
     resources :breweries
     
     resources :sakes do
-      collection do
-        get 'rated'
-      end
+        get 'rated', on: :collection
     end 
       
     # Signup/Login
