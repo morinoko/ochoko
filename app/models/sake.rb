@@ -43,11 +43,7 @@ class Sake < ApplicationRecord
   end
 
   def localized_grade
-    if I18n.locale == :ja
-      Sake::GRADES[self.grade.to_sym][:japanese]
-    else
-      Sake::GRADES[self.grade.to_sym][:english]
-    end
+    I18n.locale == :ja ? Sake::GRADES[self.grade.to_sym][:japanese] : Sake::GRADES[self.grade.to_sym][:english]
   end
 
   def localized_sake_type

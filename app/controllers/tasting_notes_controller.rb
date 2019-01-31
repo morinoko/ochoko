@@ -17,9 +17,7 @@ class TastingNotesController < ApplicationController
   def new
     @tasting_note = @user.tasting_notes.build
     
-    if params[:sake_id]
-      @tasting_note.sake_id = params[:sake_id]
-    end
+    @tasting_note.sake_id = params[:sake_id] if params[:sake_id]
   end
 
   def create
