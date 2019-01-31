@@ -9,7 +9,7 @@
 <% if logged_in? && current_user == @tasting_note.user %>
   <div class="current_user_links">
     <%= link_to t('.edit_html'), edit_user_tasting_note_path(@tasting_note.user, @tasting_note) %>
-    
+
     <div id="delete">
       <%= link_to t('.delete_html'), user_tasting_note_path(@tasting_note.user, @tasting_note), method: :delete, data: { confirm: t('.delete_confirmation') } %>
     </div>

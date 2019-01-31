@@ -6,7 +6,7 @@ class SakesController < ApplicationController
   def index
     @sakes = Sake.all
   end
-  
+
   def rated
     @sakes = Sake.rated
   end
@@ -41,7 +41,7 @@ class SakesController < ApplicationController
 
   def edit
   end
-  
+
   def update
     if @sake.update(sake_params)
       redirect_to @sake

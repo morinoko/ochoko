@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_many :tasting_notes, dependent: :destroy
   has_many :sakes, through: :tasting_notes
   has_secure_password
-  
+
   validates :password, presence: true
   validates :username, presence: true
   validates :email, presence: true, uniqueness: true
@@ -15,7 +15,7 @@ class User < ApplicationRecord
       user.password = SecureRandom.hex
     end
   end
-  
+
   def sakes_with_tasting_notes
     self.tasting_notes.map { |note| note.sake }
   end

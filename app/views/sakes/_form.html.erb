@@ -3,12 +3,12 @@
   <div class="form-group">
     <%= f.label :japanese_name %>
     <%= f.text_field :japanese_name %>
-    
+
     <% if @sake.errors[:japanese_name].any? %>
       <%= error_feedback(object: @sake, attribute: :japanese_name) %>
     <% end %>
   </div>
-  
+
   <div class="form-group">
     <%= f.label :hiragana_name %>
     <%= f.text_field :hiragana_name %>
@@ -17,41 +17,41 @@
   <div class="form-group">
     <%= f.label :romanized_name %>
     <%= f.text_field :romanized_name %>
-    
+
     <% if @sake.errors[:romanized_name].any? %>
       <%= error_feedback(object: @sake, attribute: :romanized_name) %>
     <% end %>
   </div>
-  
+
   <h3><%= t('.sake_type') %></h3>
   <div class="form-group">
     <%= f.label :sake_type_japanese %>
     <%= f.text_field :sake_type_japanese %>
   </div>
-  
+
   <div class="form-group">
     <%= f.label :sake_type_romanized %>
     <%= f.text_field :sake_type_romanized %>
   </div>
-  
+
   <div class="form-group">
     <%= f.label :grade %>
     <%= f.select(:grade, sake_grades_for_select, include_blank: true) %>
-    
+
     <% if @sake.errors[:grade].any? %>
       <%= error_feedback(object: @sake, attribute: :grade) %>
     <% end %>
   </div>
-  
+
   <h3><%= t('activerecord.models.brewery') %></h3>
   <div class="form-group">
     <%= f.label :brewery_id, t('.choose_brewery') %>
     <%= f.collection_select(:brewery_id, @breweries, :id, :localized_name, include_blank: true) %>
-    
+
     <% if @sake.errors[:brewery_id].any? %>
       <%= error_feedback(object: @sake, attribute: :brewery_id) %>
     <% end %>
   </div>
-  
+
   <%= f.submit t('.submit'), class: "button btn-regular" %>
 <% end %>

@@ -10,7 +10,7 @@ class BreweriesController < ApplicationController
 
   def show
   end
-  
+
   def new
     @brewery = Brewery.new
   end
@@ -39,7 +39,7 @@ class BreweriesController < ApplicationController
   end
 
   private
-  
+
   def brewery_params
     params.require(:brewery).permit(:japanese_name, :hiragana_name, :romanized_name, :location_id)
   end

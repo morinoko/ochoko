@@ -1,12 +1,12 @@
 class Sake < ApplicationRecord
   belongs_to :brewery
   has_many :tasting_notes, dependent: :destroy
-  
+
   validates :japanese_name, presence: true
   validates :romanized_name, presence: true
   validates :grade, presence: true
   validates :brewery_id, presence: true
-  
+
   scope :rated, -> { joins(:tasting_notes).distinct("tasting_notes.sake_id") }
 
   GRADES = {
@@ -38,10 +38,10 @@ class Sake < ApplicationRecord
   
   def localized_name
     localized_name = I18n.locale == :ja ? japanese_name : romanized_name
-    
+
     localized_name += " #{localized_sake_type}" if localized_sake_type
   end
-  
+
   def localized_grade
     if I18n.locale == :ja
       Sake::GRADES[self.grade.to_sym][:japanese]
@@ -49,7 +49,7 @@ class Sake < ApplicationRecord
       Sake::GRADES[self.grade.to_sym][:english]
     end
   end
-  
+
   def localized_sake_type
     if I18n.locale == :ja
       sake_type_japanese if sake_type_japanese
@@ -57,7 +57,7 @@ class Sake < ApplicationRecord
       sake_type_romanized if sake_type_romanized
     end
   end
-  
+
   def localized_location
     self.brewery.location.localized_name
   end

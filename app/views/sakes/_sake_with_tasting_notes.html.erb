@@ -2,9 +2,9 @@
   <div class="title">
     <%= link_to sake.localized_name, sake_path(sake), class: "localized-name" %>
   </div>
-  
+
   <%= render partial: "sakes/details", locals: { sake: sake } %>
-  
+
   <% sake.tasting_notes.each do |tasting_note| %>
     <div class="tasting-note">
       <div class="rating">

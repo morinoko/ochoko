@@ -6,7 +6,7 @@
 <% @locations.each do |location| %>
   <% if location.breweries.any? %>
     <h2><%= location.localized_name %></h2>
-    
+
     <% location.breweries.each do |brewery| %>
       <%= render partial: 'brewery', locals: { brewery: brewery } %>
     <% end %>

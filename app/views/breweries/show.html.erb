@@ -3,7 +3,7 @@
 
 <% if @brewery.sakes.count > 0 %>
   <h2><%= t('.sakes') %></h2>
-  
+
   <% @brewery.sakes.each do |sake| %>
     <%= render partial: 'sakes/sake', locals: { sake: sake } %>
   <% end %>

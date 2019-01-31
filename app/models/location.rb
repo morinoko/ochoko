@@ -1,17 +1,17 @@
 class Location < ApplicationRecord
   include JpPrefecture
   jp_prefecture :prefecture_code
-  
+
   has_many :breweries
-  
+
   def romanized_name
     self.prefecture.name_e
   end
-  
+
   def japanese_name
     self.prefecture.name
   end
-  
+
   def localized_name
     if I18n.locale == :ja
       japanese_name
@@ -19,7 +19,7 @@ class Location < ApplicationRecord
       romanized_name
     end
   end
-  
+
   # Other JpPrefecture data can be accesssed by these methods:
   # location.prefecture.code => 13
   # location.prefecture.name_h => "とうきょうと"
