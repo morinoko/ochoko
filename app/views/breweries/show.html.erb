@@ -1,7 +1,7 @@
 <h1><%= @brewery.localized_name %></h1>
 <%= render partial: 'details', locals: { brewery: @brewery } %>
 
-<% if @brewery.sakes.count > 0 %>
+<% if @brewery.sakes.size > 0 %>
   <h2><%= t('.sakes') %></h2>
 
   <% @brewery.sakes.each do |sake| %>
