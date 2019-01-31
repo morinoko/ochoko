@@ -1,6 +1,6 @@
 class Brewery < ApplicationRecord
   belongs_to :location
-  has_many :sakes
+  has_many :sakes, dependent: :destroy
   
   validates :japanese_name, presence: true
   validates :japanese_name, uniqueness: { scope: :location_id,

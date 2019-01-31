@@ -1,12 +1,13 @@
 class Sake < ApplicationRecord
   belongs_to :brewery
-  has_many :tasting_notes
-  scope :rated, -> { joins(:tasting_notes).distinct("tasting_notes.sake_id") }
+  has_many :tasting_notes, dependent: :destroy
   
   validates :japanese_name, presence: true
   validates :romanized_name, presence: true
   validates :grade, presence: true
   validates :brewery_id, presence: true
+  
+  scope :rated, -> { joins(:tasting_notes).distinct("tasting_notes.sake_id") }
 
   GRADES = {
     :honjozo =>           { japanese: "本醸造",

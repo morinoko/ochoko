@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :tasting_notes
+  has_many :tasting_notes, dependent: :destroy
   has_many :sakes, through: :tasting_notes
   has_secure_password
   
