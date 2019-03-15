@@ -5,6 +5,8 @@ ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
+gem "railties", ">= 5.2.2.1"
+gem "actionview", ">= 5.2.2.1"
 # Use prosgres as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
