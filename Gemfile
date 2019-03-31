@@ -13,8 +13,10 @@ gem 'pg'
 gem 'puma', '~> 3.11'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+gem 'active_model_serializers'
+gem 'jquery-rails'
+gem 'rails-ujs'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -25,7 +27,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-#gem 'rails-i18n'
 gem 'jp_prefecture'
 
 gem 'omniauth'
