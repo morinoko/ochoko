@@ -6,9 +6,18 @@ class BreweriesController < ApplicationController
   def index
     @locations = Location.all
     @breweries = Brewery.all
+    
+    respond_to do |format|
+      format.html
+      format.json { render json: @breweries }
+    end
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @brewery }
+    end
   end
 
   def new
