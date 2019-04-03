@@ -1,3 +1,10 @@
+# t.string "japanese_name"
+# t.string "romanized_name"
+# t.datetime "created_at", null: false
+# t.datetime "updated_at", null: false
+# t.integer "location_id"
+# t.string "hiragana_name"
+
 class Brewery < ApplicationRecord
   belongs_to :location
   has_many :sakes, dependent: :destroy
