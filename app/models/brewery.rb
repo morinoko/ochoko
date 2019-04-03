@@ -17,6 +17,14 @@ class Brewery < ApplicationRecord
   validates :romanized_name, uniqueness: { scope: :location_id,
                                            message: I18n.t(:taken, scope: 'activerecord.errors.models.brewery') }
   validates :location_id, presence: true
+  
+  def next
+    self.class.where("id > ?", id).first
+  end
+
+  def previous
+    self.class.where("id < ?", id).last
+  end
 
   def localized_name
     I18n.locale == :ja ? japanese_name : romanized_name

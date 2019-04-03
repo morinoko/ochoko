@@ -38,6 +38,8 @@ en:
   facebook_login: "Log in with Facebook"
   login_required: "You need to be logged in to do that."
   login_status: "Logged in as %{username}."
+  next: "Next"
+  previous: "Previous"
 
   header:
     sake: "Sake"
