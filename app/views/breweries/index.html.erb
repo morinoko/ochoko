@@ -3,6 +3,7 @@
   <%= link_to t('.add_html'), new_brewery_path, class: "button btn-add" %>
 </div>
 
+<!--
 <% @locations.each do |location| %>
   <% if location.breweries.any? %>
     <h2><%= location.localized_name %></h2>
@@ -12,3 +13,25 @@
     <% end %>
   <% end %>
 <% end %>
+-->
+
+<div id="breweries-list">
+</div>
+
+<script id="brewery-template" type="text/x-handlebars-template">
+  <div class="card brewery-card">
+    <div class="title">
+      <a class="localized-name" href="/breweries/{{id}}">{{localizedName}}</a>
+    </div>
+    
+    <div class="brewery-details">
+      <span class="location"><i class="fas fa-globe-asia"></i> {{localizedLocation}}</span>
+      <% if I18n.locale == :ja %>
+        <span class="hiragana-name"><i class="fas fa-language"></i> {{hiraganaName}}</span> 
+      <% else %>
+        <span class="japanese-name"><i class="fas fa-language"></i> {{japaneseName}}</span>
+      <% end %>
+    </div>
+  </div>
+</script>
+
