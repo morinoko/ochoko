@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require handlebars-v4.1.1
 //= require activestorage
 //= require turbolinks
 //= require_tree .
