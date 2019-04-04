@@ -1,5 +1,6 @@
 class BrewerySerializer < ActiveModel::Serializer
   attributes :id, :localized_name, :romanized_name, :hiragana_name, :japanese_name, :localized_location, :next_id, :previous_id
+  has_many :sakes, serializer: BrewerySakeSerializer
   
   def next_id
     self.object.next ?  self.object.next.id : nil
