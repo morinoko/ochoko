@@ -6,16 +6,19 @@
   </nav>
 </section>
 
-<% if @brewery.sakes.size > 0 %>
+<section id="sakes">
   <h2><%= t('.sakes') %></h2>
-
-  <% @brewery.sakes.each do |sake| %>
-    <%= render partial: 'sakes/sake', locals: { sake: sake } %>
-  <% end %>
-<% else %>
-  <p><%= t('.no_sakes') %> <%= link_to t('.add_sake_now'), new_sake_path(params: { brewery_id: @brewery.id }) %></p>
-<% end %>
-
+  <div id="sake-list">
+    <% if @brewery.sakes.size > 0 %>
+      <% @brewery.sakes.each do |sake| %>
+        <%= render partial: 'sakes/sake', locals: { sake: sake } %>
+      <% end %>
+    <% else %>
+      <p><%= t('.no_sakes') %> <%= link_to t('.add_sake_now'), new_sake_path(params: { brewery_id: @brewery.id }) %></p>
+    <% end %>
+  </div>
+</section>
+  
 <div class="list-link">
   <%= link_to t('.back'), breweries_path %>
 </div>
@@ -26,7 +29,6 @@
     <%= link_to t('.add_sake_html'), new_sake_path(brewery_id: @brewery.id)%>
   </div>
 <% end %>
-
 
 <script id="brewery-show-template" type="text/x-handlebars-template">
   <h1>{{localizedName}}</h1>
@@ -42,4 +44,24 @@
   <nav>
     <a id="previous-link" href="/en/breweries/{{previousId}}">Previous</a>|<a id="next-link" href="/en/breweries/{{nextId}}">Next</a>
   </nav>
+</script>
+
+<script id="brewery-sake-template" type="text/x-handlebars-template">
+  <div class="card sake-card">
+    <div class="title">
+      <a class="localized-name" href="/en/sakes/{{id}}">{{localized_name}}</a>
+    </div>
+  
+    <div class="sake-details">
+      <span class="grade"><i class="fas fa-wine-bottle"></i> {{localized_grade}}</span>
+      <span class="location"><i class="fas fa-globe-asia"></i> {{localized_location}}</span>
+      <% if I18n.locale == :en %>
+        <span class="japanese-name"><i class="fas fa-language"></i> {{japanese_name}} {{sake_type_japanese}}</span>
+      <% end %>
+    </div>
+</div>
+</script>
+
+<script id="brewery-no-sakes" type="text/x-handlebars-template">
+  <p><%= t('.no_sakes') %> <%= link_to t('.add_sake_now'), new_sake_path(params: { brewery_id: @brewery.id }) %></p>
 </script>
