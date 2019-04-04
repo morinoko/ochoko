@@ -9,6 +9,8 @@ $(document).ready(function(){
       this.romanizedName = breweryJSON.romanized_name;
       this.japaneseName = breweryJSON.japanese_name;
       this.localizedLocation = breweryJSON.localized_location;
+      this.previousId = breweryJSON.previous_id;
+      this.nextId = breweryJSON.next_id;
     }
     
     if ($('body').is('.breweries.index')) {
@@ -24,23 +26,42 @@ $(document).ready(function(){
     
     if ($('body').is('.breweries.index')) {
       $.get("/breweries.json").success(breweries => {
+        $("#loading").remove();
+        
         // iterate over and inject into DOM
         breweries.forEach(breweryData => {
           let breweryObj = new Brewery(breweryData);
           let breweryHtml = breweryObj.renderHtml();
-          console.log(breweryHtml);
+
           $("#breweries-list").append(breweryHtml);
         })
       }).error(error => console.log(error));
     }
     
     if ($('body').is('.breweries.show')) {
-      debugger
-      $.get("/breweries/42.json").success(breweryData => {
-        let breweryObj = new Brewery(breweryData);
-        let breweryHtml = breweryObj.renderHtml();
-        console.log(breweryHtml);
-      }).error(error => console.log(error));
+      attachEventListeners();
+      
+      function attachEventListeners() {
+        let $nextLink = $("#next-link");
+        let $previousLink = $("#previous-link");
+        
+        $nextLink.bind('click', getData);
+        $previousLink.bind('click', getData);
+      }
+      
+      function getData(event) {
+        event.preventDefault();
+        let url = event.target.href;
+        
+        $.get(url + ".json").success(breweryData => {
+          let breweryObj = new Brewery(breweryData);
+          let breweryHtml = breweryObj.renderHtml();
+
+          $("#brewery").html(breweryHtml);
+          attachEventListeners();
+          history.pushState({brewery: breweryObj.id}, "brewery", breweryObj.id);
+        }).error(error => console.log(error));
+      }
     }
   }
 

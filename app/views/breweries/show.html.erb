@@ -1,5 +1,10 @@
-<h1><%= @brewery.localized_name %></h1>
-<%= render partial: 'details', locals: { brewery: @brewery } %>
+<section id="brewery">
+  <h1><%= @brewery.localized_name %></h1>
+  <%= render partial: 'details', locals: { brewery: @brewery } %>
+  <nav>
+    <%= brewery_nav %>
+  </nav>
+</section>
 
 <% if @brewery.sakes.size > 0 %>
   <h2><%= t('.sakes') %></h2>
@@ -21,3 +26,20 @@
     <%= link_to t('.add_sake_html'), new_sake_path(brewery_id: @brewery.id)%>
   </div>
 <% end %>
+
+
+<script id="brewery-show-template" type="text/x-handlebars-template">
+  <h1>{{localizedName}}</h1>
+  <div class="brewery-details">
+    <span class="location"><i class="fas fa-globe-asia"></i> {{localizedLocation}}</span>
+    <% if I18n.locale == :ja %>
+      <span class="hiragana-name"><i class="fas fa-language"></i> {{hiraganaName}}</span> 
+    <% else %>
+      <span class="japanese-name"><i class="fas fa-language"></i> {{japaneseName}}</span>
+    <% end %>
+  </div>
+  
+  <nav>
+    <a id="previous-link" href="/en/breweries/{{previousId}}">Previous</a>|<a id="next-link" href="/en/breweries/{{nextId}}">Next</a>
+  </nav>
+</script>
