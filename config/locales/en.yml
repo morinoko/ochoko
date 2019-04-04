@@ -40,6 +40,7 @@ en:
   login_status: "Logged in as %{username}."
   next: "Next"
   previous: "Previous"
+  loading: "Loading... Please wait a short moment."
 
   header:
     sake: "Sake"

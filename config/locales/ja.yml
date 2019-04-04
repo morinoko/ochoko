@@ -9,6 +9,7 @@ ja:
   login_status: "%{username}でログインしています。"
   next: "次"
   previous: "前"
+  loading: "ロード中・・・少々お待ちください。"
 
   header:
     sake: "日本酒"
