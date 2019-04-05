@@ -17,10 +17,6 @@ $(document).ready(function(){
     
     if ($('body').is('.breweries.index')) {
       Brewery.prototype.templateSource = $('#brewery-template').html();
-      Brewery.prototype.template = Handlebars.compile(Brewery.prototype.templateSource);
-      Brewery.prototype.renderHtml = function() {
-        return Brewery.prototype.template(this);
-      }
     } else if ($('body').is('.breweries.show')) {
       Brewery.prototype.templateSource = $('#brewery-show-template').html();
       Brewery.prototype.sakeTemplateSource = $('#brewery-sake-template').html();
@@ -28,6 +24,11 @@ $(document).ready(function(){
       Brewery.prototype.renderHmtlForSake = function(sake) {
         return Brewery.prototype.sakeTemplate(sake);
       }
+    }
+    
+    Brewery.prototype.template = Handlebars.compile(Brewery.prototype.templateSource);
+    Brewery.prototype.renderHtml = function() {
+      return Brewery.prototype.template(this);
     }
     
     if ($('body').is('.breweries.index')) {
