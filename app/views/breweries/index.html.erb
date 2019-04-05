@@ -1,19 +1,9 @@
 <div class="title-header">
   <h1><%= t('.title') %></h1>
-  <%= link_to t('.add_html'), new_brewery_path, class: "button btn-add" %>
+  <%= link_to t('.add_html'), new_brewery_path, class: "button btn-add", id: "add-brewery-button" %>
 </div>
 
-<!--
-<% @locations.each do |location| %>
-  <% if location.breweries.any? %>
-    <h2><%= location.localized_name %></h2>
-
-    <% location.breweries.each do |brewery| %>
-      <%= render partial: 'brewery', locals: { brewery: brewery } %>
-    <% end %>
-  <% end %>
-<% end %>
--->
+<%= render partial: 'form' %>
 
 <div id="breweries-list">
   <p id="loading"><%= t('loading') %></p>

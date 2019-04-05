@@ -6,6 +6,7 @@ class BreweriesController < ApplicationController
   def index
     @locations = Location.all
     @breweries = Brewery.all
+    @brewery = Brewery.new
     
     respond_to do |format|
       format.html
@@ -28,7 +29,7 @@ class BreweriesController < ApplicationController
     @brewery = Brewery.new(brewery_params)
     
     if @brewery.save
-      redirect_to @brewery
+      render json: @brewery, status: 201
     else
       set_locations
       render :new

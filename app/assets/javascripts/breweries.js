@@ -17,19 +17,17 @@ $(document).ready(function(){
     
     if ($('body').is('.breweries.index')) {
       Brewery.prototype.templateSource = $('#brewery-template').html();
+      Brewery.prototype.template = Handlebars.compile(Brewery.prototype.templateSource);
+      Brewery.prototype.renderHtml = function() {
+        return Brewery.prototype.template(this);
+      }
     } else if ($('body').is('.breweries.show')) {
       Brewery.prototype.templateSource = $('#brewery-show-template').html();
       Brewery.prototype.sakeTemplateSource = $('#brewery-sake-template').html();
-    }
-    
-    Brewery.prototype.template = Handlebars.compile(Brewery.prototype.templateSource);
-    Brewery.prototype.renderHtml = function() {
-      return Brewery.prototype.template(this);
-    }
-    
-    Brewery.prototype.sakeTemplate = Handlebars.compile(Brewery.prototype.sakeTemplateSource);
-    Brewery.prototype.renderHmtlForSake = function(sake) {
-      return Brewery.prototype.sakeTemplate(sake);
+      Brewery.prototype.sakeTemplate = Handlebars.compile(Brewery.prototype.sakeTemplateSource);
+      Brewery.prototype.renderHmtlForSake = function(sake) {
+        return Brewery.prototype.sakeTemplate(sake);
+      }
     }
     
     if ($('body').is('.breweries.index')) {
@@ -44,6 +42,9 @@ $(document).ready(function(){
           $("#breweries-list").append(breweryHtml);
         })
       }).error(error => console.log(error));
+      
+      $('#add-brewery-button').bind('click', showForm);
+      $('form').submit(submitForm);
     }
     
     if ($('body').is('.breweries.show')) {
@@ -84,6 +85,31 @@ $(document).ready(function(){
           history.pushState({brewery: breweryObj.id}, "brewery", breweryObj.id);
         }).error(error => console.log(error));
       }
+    }
+    
+    function showForm(event) {
+      event.preventDefault();
+      $('form').show();
+    }
+    
+    function resetForm() {
+      $('form')[0].reset();
+      $('#brewery-submit-button').prop('disabled', false);
+    }
+    
+    function submitForm(event) {
+      event.preventDefault();
+      
+      let formValues = $(this).serialize();
+      let posting = $.post('/breweries', formValues);
+      
+      posting.done(function(breweryData) {
+        let breweryObj = new Brewery(breweryData);
+        let breweryHtml = breweryObj.renderHtml();
+        
+        $('#breweries-list').prepend(breweryHtml);
+        resetForm();
+      });
     }
   }
 

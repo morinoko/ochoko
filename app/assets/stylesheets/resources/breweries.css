@@ -13,3 +13,8 @@
 .brewery-details span:last-child {
   margin-right: 0;
 }
+
+.breweries.index form {
+  display: none;
+  margin-bottom: 4em;
+}
