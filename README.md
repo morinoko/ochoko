@@ -12,6 +12,8 @@ Try out the app here: https://ochoko.herokuapp.com/
 - App can be used in either Japanese or English
 - Sign up (Facebook or email/password) and add tasting notes for the sakes you've drank
 
+* The ['ajax' branch](https://github.com/morinoko/ochoko/tree/ajax) demonstrates using AJAX calls to load and post data asynchronously (for brewery resource only).
+
 ## Features to add in the future
 
 - Search for sakes and breweries
