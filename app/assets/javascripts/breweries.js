@@ -113,11 +113,4 @@ $(document).ready(function(){
       });
     }
   }
-
-  // Using fetch
-/*
-  fetch("/breweries.json")
-  .then(response => response.json())
-  .then(json => console.log(json));
-*/
 });
