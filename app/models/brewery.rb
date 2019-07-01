@@ -12,7 +12,8 @@ class Brewery < ApplicationRecord
   validates :location_id, presence: true
 
   def localized_name
-    I18n.locale == :ja ? name_ja : name_en
+    locale = I18n.locale
+    self.send("name_#{locale}")
   end
 
   def localized_location
