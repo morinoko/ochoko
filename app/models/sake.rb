@@ -28,17 +28,18 @@ class Sake < ApplicationRecord
 
   scope :rated, -> { joins(:tasting_notes).distinct("tasting_notes.sake_id") }
 
-  def self.grades_english
+  def self.grades_en
     GRADES.map { |key, value| GRADES[key][:en] }
   end
 
-  def self.grades_japanese
+  def self.grades_ja
     GRADES.map { |key, value| GRADES[key][:ja] }
   end
   
   def localized_name
-    localized_name = I18n.locale == :ja ? name_ja : name_en
-
+    locale = I18n.locale
+    localized_name = self.send("name_#{locale}")
+    
     localized_name += " #{localized_sake_type}" if localized_sake_type
   end
 
@@ -48,11 +49,10 @@ class Sake < ApplicationRecord
   end
 
   def localized_sake_type
-    if I18n.locale == :ja
-      sake_type_ja if sake_type_ja
-    else
-      sake_type_en if sake_type_en
-    end
+    locale = I18n.locale
+    localized_method = "sake_type_#{locale}"
+
+    self.send("sake_type_#{locale}") if self.send("sake_type_#{locale}")
   end
 
   def localized_location
