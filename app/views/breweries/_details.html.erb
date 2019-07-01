@@ -1,8 +1,8 @@
 <div class="brewery-details">
   <span class="location"><i class="fas fa-globe-asia"></i> <%= brewery.localized_location %></span>
   <% if I18n.locale == :ja %>
-    <span class="hiragana-name"><i class="fas fa-language"></i> <%= brewery.hiragana_name %></span> 
+    <span class="hiragana-name"><i class="fas fa-language"></i> <%= brewery.name_hiragana %></span> 
   <% else %>
-    <span class="japanese-name"><i class="fas fa-language"></i> <%= brewery.japanese_name %></span>
+    <span class="japanese-name"><i class="fas fa-language"></i> <%= brewery.name_ja %></span>
   <% end %>
 </div>

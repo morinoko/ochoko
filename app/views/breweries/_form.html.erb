@@ -1,29 +1,29 @@
 <%= form_for @brewery do |f| %>
   <h3><%= t('.name') %></h3>
   <div class="form-group">
-    <%= f.label :japanese_name %>
-    <%= f.text_field :japanese_name %>
+    <%= f.label :name_ja %>
+    <%= f.text_field :name_ja %>
 
-    <% if @brewery.errors[:japanese_name].any? %>
-      <%= error_feedback(object: @brewery, attribute: :japanese_name) %>
+    <% if @brewery.errors[:name_ja].any? %>
+      <%= error_feedback(object: @brewery, attribute: :name_ja) %>
     <% end %>
   </div>
 
   <div class="form-group">
-    <%= f.label :hiragana_name %>
-    <%= f.text_field :hiragana_name %>
+    <%= f.label :name_hiragana %>
+    <%= f.text_field :name_hiragana %>
 
-    <% if @brewery.errors[:hiragana_name].any? %>
-      <%= error_feedback(object: @brewery, attribute: :hiragana_name) %>
+    <% if @brewery.errors[:name_hiragana].any? %>
+      <%= error_feedback(object: @brewery, attribute: :name_hiragana) %>
     <% end %>
   </div>
 
   <div class="form-group">
-    <%= f.label :romanized_name %>
-    <%= f.text_field :romanized_name %>
+    <%= f.label :name_en %>
+    <%= f.text_field :name_en %>
 
-    <% if @brewery.errors[:romanized_name].any? %>
-      <%= error_feedback(object: @brewery, attribute: :romanized_name) %>
+    <% if @brewery.errors[:name_en].any? %>
+      <%= error_feedback(object: @brewery, attribute: :name_en) %>
     <% end %>
   </div>
 

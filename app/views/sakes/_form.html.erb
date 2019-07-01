@@ -1,37 +1,37 @@
 <%= form_for @sake do |f| %>
   <h3><%= t('.name') %></h3>
   <div class="form-group">
-    <%= f.label :japanese_name %>
-    <%= f.text_field :japanese_name %>
+    <%= f.label :name_ja %>
+    <%= f.text_field :name_ja %>
 
-    <% if @sake.errors[:japanese_name].any? %>
-      <%= error_feedback(object: @sake, attribute: :japanese_name) %>
+    <% if @sake.errors[:name_ja].any? %>
+      <%= error_feedback(object: @sake, attribute: :name_ja) %>
     <% end %>
   </div>
 
   <div class="form-group">
-    <%= f.label :hiragana_name %>
-    <%= f.text_field :hiragana_name %>
+    <%= f.label :name_hiragana %>
+    <%= f.text_field :name_hiragana %>
   </div>
 
   <div class="form-group">
-    <%= f.label :romanized_name %>
-    <%= f.text_field :romanized_name %>
+    <%= f.label :name_en %>
+    <%= f.text_field :name_en %>
 
-    <% if @sake.errors[:romanized_name].any? %>
-      <%= error_feedback(object: @sake, attribute: :romanized_name) %>
+    <% if @sake.errors[:rname_en].any? %>
+      <%= error_feedback(object: @sake, attribute: :name_en) %>
     <% end %>
   </div>
 
   <h3><%= t('.sake_type') %></h3>
   <div class="form-group">
-    <%= f.label :sake_type_japanese %>
-    <%= f.text_field :sake_type_japanese %>
+    <%= f.label :sake_type_ja %>
+    <%= f.text_field :sake_type_ja %>
   </div>
 
   <div class="form-group">
-    <%= f.label :sake_type_romanized %>
-    <%= f.text_field :sake_type_romanized %>
+    <%= f.label :sake_type_en %>
+    <%= f.text_field :sake_type_en %>
   </div>
 
   <div class="form-group">
