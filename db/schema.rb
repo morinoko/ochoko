@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_06_222101) do
+ActiveRecord::Schema.define(version: 2019_07_01_225237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "breweries", force: :cascade do |t|
-    t.string "japanese_name"
-    t.string "romanized_name"
+    t.string "name_ja"
+    t.string "name_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "location_id"
-    t.string "hiragana_name"
+    t.string "name_hiragana"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -31,15 +31,15 @@ ActiveRecord::Schema.define(version: 2019_01_06_222101) do
   end
 
   create_table "sakes", force: :cascade do |t|
-    t.string "japanese_name"
-    t.string "romanized_name"
+    t.string "name_ja"
+    t.string "name_en"
     t.integer "brewery_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "hiragana_name"
+    t.string "name_hiragana"
     t.string "grade"
-    t.string "sake_type_romanized"
-    t.string "sake_type_japanese"
+    t.string "sake_type_en"
+    t.string "sake_type_ja"
   end
 
   create_table "tasting_notes", force: :cascade do |t|
