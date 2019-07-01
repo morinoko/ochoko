@@ -51,11 +51,11 @@ class SakesController < ApplicationController
   private
 
   def sake_params
-    params.require(:sake).permit(:japanese_name,
-                                 :hiragana_name,
-                                 :romanized_name,
-                                 :sake_type_japanese,
-                                 :sake_type_romanized,
+    params.require(:sake).permit(:name_ja,
+                                 :name_hiragana,
+                                 :name_en,
+                                 :sake_type_ja,
+                                 :sake_type_en,
                                  :grade,
                                  :brewery_id)
   end

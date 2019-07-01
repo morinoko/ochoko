@@ -21,8 +21,8 @@ class Sake < ApplicationRecord
   belongs_to :brewery
   has_many :tasting_notes, dependent: :destroy
 
-  validates :japanese_name, presence: true
-  validates :romanized_name, presence: true
+  validates :name_ja, presence: true
+  validates :name_en, presence: true
   validates :grade, presence: true
   validates :brewery_id, presence: true
 
@@ -37,7 +37,7 @@ class Sake < ApplicationRecord
   end
   
   def localized_name
-    localized_name = I18n.locale == :ja ? japanese_name : romanized_name
+    localized_name = I18n.locale == :ja ? name_ja : name_en
 
     localized_name += " #{localized_sake_type}" if localized_sake_type
   end
@@ -48,9 +48,9 @@ class Sake < ApplicationRecord
 
   def localized_sake_type
     if I18n.locale == :ja
-      sake_type_japanese if sake_type_japanese
+      sake_type_ja if sake_type_ja
     else
-      sake_type_romanized if sake_type_romanized
+      sake_type_en if sake_type_en
     end
   end
 

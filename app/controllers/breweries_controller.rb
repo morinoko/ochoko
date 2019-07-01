@@ -41,7 +41,7 @@ class BreweriesController < ApplicationController
   private
 
   def brewery_params
-    params.require(:brewery).permit(:japanese_name, :hiragana_name, :romanized_name, :location_id)
+    params.require(:brewery).permit(:name_ja, :name_hiragana, :name_en, :location_id)
   end
 
   def set_brewery
