@@ -4,16 +4,17 @@ class Location < ApplicationRecord
 
   has_many :breweries
 
-  def romanized_name
+  def name_en
     self.prefecture.name_e
   end
 
-  def japanese_name
+  def name_ja
     self.prefecture.name
   end
 
   def localized_name
-    I18n.locale == :ja ? japanese_name : romanized_name
+    locale = I18n.locale
+    self.send("name_#{locale}")
   end
 
   # Other JpPrefecture data can be accesssed by these methods:
