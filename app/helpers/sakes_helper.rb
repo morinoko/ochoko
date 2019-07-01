@@ -1,7 +1,7 @@
 module SakesHelper
   def sake_grades_for_select
-    language = I18n.locale == :ja ? :japanese : :english
+    locale = I18n.locale.to_sym
     
-    Sake::GRADES.map { |key, value| [Sake::GRADES[key][language], key] }
+    Sake::GRADES.map { |key, value| [Sake::GRADES[key][locale], key] }
   end
 end
